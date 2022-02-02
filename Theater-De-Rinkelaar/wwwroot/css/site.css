@@ -17,10 +17,12 @@ body {
 
 /* Style the header */
 .header {
+    background-image: url("https://www.omfif.org/wp-content/uploads/2020/06/theatre-stage-newweb.jpg");
     background-color: #f1f1f1;
     padding: 30px;
     text-align: center;
     font-size: 35px;
+    height: 200px;
 }
 
 /* Container for flexboxes */
