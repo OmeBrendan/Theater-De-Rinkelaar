@@ -1,9 +1,19 @@
-﻿.row {
+﻿.body {
+    color: #F8E5EE;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
 }
 
-.column {  
+.column {
     flex-grow: 1;
- 
+    background-color: #9F2042;
+    padding: 20px 10px;
+    margin: 5px;
+}
+
+.footer {
+    background-color: #3D1308;
 }
