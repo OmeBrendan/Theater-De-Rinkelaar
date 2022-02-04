@@ -1,8 +1,9 @@
-﻿.row
-{
-
+﻿.row {
+    display: flex;
+    justify-content: space-between;
 }
 
-.column{
-
+.column {  
+    flex-grow: 1;
+ 
 }
