@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Theater-De-Rinkelaar, Configuration: Debug|AnyCPU ------
+1>C:\Program Files\dotnet\sdk\6.0.102\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(267,5): error NETSDK1004: Assets file 'D:\Gebruikers\vince\Source\Repos\Theater-De-Rinkelaar\Theater-De-Rinkelaar\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
