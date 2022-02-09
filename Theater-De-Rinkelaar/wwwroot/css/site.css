@@ -1,5 +1,5 @@
-﻿.body {
-    color: #F8E5EE;
+﻿body {
+    
 }
 
 .row {
@@ -12,9 +12,16 @@
     background-color: #9F2042;
     padding: 20px 10px;
     margin: 5px;
+    font-family: 'Rhodium Libre', serif;
+    color:#F8E5EE
+}
+
+.header{
+    background-image:url(/img/theater-header.jpg)
 }
 
 .footer {
     background-color: #3D1308;
     color: #F8E5EE;
+    font-family: 'Rhodium Libre', serif;
 }
