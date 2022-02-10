@@ -1,7 +1,10 @@
 ﻿.header {
-    font-size: 30px;
-    text-align: center;
     color: white;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 96px;
+    text-align: center;
     height: 300px;
     background-color: darkred;
     background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
@@ -9,8 +12,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 ﻿
-.searchbar {
+.zoekbalk {
     float: right;
     padding: 6px;
     border: none;
@@ -19,12 +23,13 @@
     font-size: 17px;
 }
 
+
 body {
     background-color: #F8E5EE;
     margin: 0px;
 }
 
-/* Add a black background color to the top navigation */
+/* Achtergrondkleur van navigatiebalk */
 .topnav {
     background: #211103;
     overflow: hidden;
@@ -57,7 +62,7 @@ body {
 .topnav a.active {
     background-color: #B5264C;
     color: white;
-    border-radius: 0px;
+    border-radius: 14px 14px 0px 0px;
     margin: 0.5% 1% 0% 1%;
 }
 
@@ -78,6 +83,24 @@ body {
     color: #F8E5EE;
 }
 
+.column a {
+    flex-grow: 1;
+    background: #7B0D1E;
+    width: 21%;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 25px 15px;
+    margin: 0.5% 1%;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 14px;
+}
+
+/* Change the color of links on hover */
+.column a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
 .tijdencolumn {
     flex-grow: 3;

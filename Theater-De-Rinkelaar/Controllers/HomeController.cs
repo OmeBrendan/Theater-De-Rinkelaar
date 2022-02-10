@@ -23,14 +23,14 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Agenda")]
+        public IActionResult Agenda()
         {
             return View();
         }
 
-        [Route("Contact")]
-        public IActionResult Contact()
+        [Route("InformatieTheater")]
+        public IActionResult InformatieTheater()
         {
             return View();
         }
