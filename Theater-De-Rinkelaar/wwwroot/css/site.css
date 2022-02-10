@@ -133,12 +133,18 @@ body {
     align-content: center;
     width: 40%;
     background-color: #9F2042;
-    padding: 20px 10px;
+    padding: 10px;
+    padding-bottom: 20px;
     margin: auto;
     border-radius: 27px;
     text-align: center;
     font-size: 20px;
     color: #F8E5EE;
+}
+
+caption {
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
 .fotos2 {
@@ -161,6 +167,21 @@ body {
 .tijden {
     margin-left: auto;
     margin-right: auto;
+}
+
+th {
+    font-weight: 900;
+}
+
+td {
+    font-weight: 200;
+    font-style: italic;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
 }
 
 .footer {
