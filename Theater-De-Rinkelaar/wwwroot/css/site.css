@@ -74,6 +74,7 @@ body {
 
 .column {
     flex-grow: 1;
+    width: 30%;
     background-color: #9F2042;
     padding: 80px 10px;
     margin:20px;
@@ -84,15 +85,18 @@ body {
 }
 
 .column a {
+    display: flex;
+    width: 50%;
+    object-position: center;
     flex-grow: 1;
     background: #7B0D1E;
-    width: 21%;
     color: #F8E5EE;
     text-align: center;
-    padding: 25px 15px;
-    margin: 0.5% 1%;
+    padding: 10px 15px;
+    margin: auto;
     text-decoration: none;
     font-size: 30px;
+    border: 6px solid #000000;
     border-radius: 14px;
 }
 
@@ -103,10 +107,11 @@ body {
 }
 
 .tijdencolumn {
-    flex-grow: 3;
+    align-content: center;
+    width: 40%;
     background-color: #9F2042;
     padding: 80px 10px;
-    margin: 20px;
+    margin: auto;
     border-radius: 27px;
     text-align: center;
     font-size: 20px;

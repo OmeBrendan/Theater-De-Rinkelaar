@@ -35,6 +35,12 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
+        [Route("Enquête")]
+        public IActionResult Enquête()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
