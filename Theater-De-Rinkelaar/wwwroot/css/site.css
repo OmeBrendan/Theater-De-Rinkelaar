@@ -1,17 +1,28 @@
-﻿.header {
-    color: white;
-    /*
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;*/
-    font-size: 96px;
-    text-align: center;
+﻿p {
+    font-family: 'Rhodium Libre', serif;
+    color: #ffffff;
+}
+
+.header {
+    position: relative;
     height: 300px;
     background-color: darkred;
     background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
     background-position: 50% 35%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bigtext {
+    font-size: 60px;
+    font-family: 'Rhodium Libre', serif;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 /*css voor zoekbalk*/﻿
