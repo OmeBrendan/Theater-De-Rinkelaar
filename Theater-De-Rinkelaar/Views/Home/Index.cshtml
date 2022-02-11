@@ -1,14 +1,9 @@
 ﻿@model List<string> 
 @{
     ViewData["Title"] = "Home";
+    ViewData["activeTab"] = "home";
 }
 
-<div id="navbar">
-    <a class="active" href="/">Home</a>
-    <a href="Agenda">Agenda</a>
-    <a href="InformatieTheater">Informatie Theater</a>
-    <a href="Enquête">Enquête</a>
-</div>
 
 <div class="row">
     <div class="column">
@@ -73,7 +68,7 @@
 </div>
 <div>
     <h1>beschrijving</h1>
-    @foreach(string naam in Model)
+    @foreach (string naam in Model)
     {
         <p>@naam</p>
     }
