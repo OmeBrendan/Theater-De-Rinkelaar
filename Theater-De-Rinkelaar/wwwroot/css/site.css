@@ -33,6 +33,16 @@
     margin-left: 15px;
 }
 
+.botlogo {
+    border-radius: 30px;
+    float: right;
+    height: 140px;
+    width: 140px;
+    border: 4px solid #7B0D1E;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
 /*css voor zoekbalk*/
 
 .header input[type=text] {
