@@ -27,6 +27,10 @@
             <input type="submit" value="verstuur" />
         </form>
 
-        
+        @if (Model != null){
+            <p>Dankjewel @Model.FirstName! We hebben je bericht ontvangen.</p>
+        }
+
+
     </div>
 </div>

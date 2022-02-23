@@ -48,12 +48,12 @@ namespace Theater_De_Rinkelaar.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact(string voornaam, string achternaam)
+        public IActionResult Contact(Person person)
         {
-            ViewData["voornaam"] = voornaam;
-            ViewData["achternaam"] = achternaam;
-
-            return View();
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+        
+            return View(person);
         }
 
         public List<string> GetNames()
