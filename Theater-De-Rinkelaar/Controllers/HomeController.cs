@@ -41,9 +41,18 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
-        [Route("Enquête")]
-        public IActionResult Enquête()
+        [Route("Contact")]
+        public IActionResult Contact()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(string voornaam, string achternaam)
+        {
+            ViewData["voornaam"] = voornaam;
+            ViewData["achternaam"] = achternaam;
+
             return View();
         }
 
