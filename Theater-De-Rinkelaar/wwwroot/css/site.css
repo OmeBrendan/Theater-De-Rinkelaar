@@ -48,9 +48,26 @@
 .header input[type=text] {
     padding: 6px;
     margin-top: 8px;
+    margin-right: 20px;
     font-size: 17px;
-    border: none;
+    border: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #9F2042;
 }
+
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
 
 .header .zoekbalk button {
     float: right;
@@ -273,6 +290,7 @@ td {
     display: inline-block;
 }
 
+/*Errorbericht van contactpagina*/
 .contactform .field-validation-error {
     color: red;
     margin-left: 10px;
