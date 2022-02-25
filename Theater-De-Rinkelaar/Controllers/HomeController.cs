@@ -48,12 +48,19 @@ namespace Theater_De_Rinkelaar.Controllers
         }
 
         [HttpPost]
+        [Route("Contact")]
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
                 return Redirect("/succes");
         
             return View(person);
+        }
+
+        [Route("succes")]
+        public IActionResult Succes()
+        {
+            return View();
         }
 
         public List<string> GetNames()

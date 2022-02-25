@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Theater_De_Rinkelaar.Models.Person
+@{
     ViewData["Title"] = "Contact";
     ViewData["activeTab"] = "contact";
 }
@@ -16,21 +17,44 @@
 </div>
 
 <div class="row">
-    <div class="column">
-        <form method="post">
-            Voornaam: <input type="text" name="FirstName" />
-            Achternaam: <input type="text" name="LastName" />
-            Email: <input type="text" name="Email" />
-            Telefoonnummer: <input type="text" name="Phone" />
-            Adres: <input type="text" name="Address" />
-            Beschrijving: <input type="text" name="Description" />
-            <input type="submit" value="verstuur" />
+    <div class="columncp">
+        <form method="post" class="contactform">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName)
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Phone)
+                @Html.TextBoxFor(m => m.Phone)
+                @Html.ValidationMessageFor(m => m.Phone)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Address)
+                @Html.TextBoxFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description)
+                @Html.TextBoxFor(m => m.Description)
+                @Html.ValidationMessageFor(m => m.Description)
+            </div>
+
+            <input type="submit" value="Verstuur Bericht" />
         </form>
-
-        @if (Model != null){
-            <p>Dankjewel @Model.FirstName! We hebben je bericht ontvangen.</p>
-        }
-
-
     </div>
 </div>

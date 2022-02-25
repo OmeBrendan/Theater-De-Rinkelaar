@@ -172,8 +172,8 @@ body {
     background-color: #9F2042;
     padding: 40px 10px;
     margin: 20px;
-    border-radius: 27px;
     text-align: center;
+    border-radius: 27px;
     font-size: 20px;
     font-family: 'Rhodium Libre', serif;
     color: #F8E5EE;
@@ -255,6 +255,28 @@ td {
     font-weight: 200;
 }
 
+/*contactpagina*/
+.columncp {
+    flex-grow: 1;
+    width: 30%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #F8E5EE;
+}
+
+.contactform label {
+    width: 200px;
+    display: inline-block;
+}
+
+.contactform .field-validation-error {
+    color: red;
+    margin-left: 10px;
+}
 
 /*tweede fotovakje op home-pagina*/
 .fotos2 {

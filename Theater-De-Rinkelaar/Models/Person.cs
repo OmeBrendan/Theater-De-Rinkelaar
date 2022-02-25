@@ -8,14 +8,26 @@ namespace Theater_De_Rinkelaar.Models
 {
     public class Person
     {
-        [Required]
+        [Required(ErrorMessage = "Gelieve uw voornaam in te vullen")]
+        [Display(Name = "Voornaam")]
         public string FirstName { get; set; }
-        [Required]
+        
+        [Required(ErrorMessage = "Gelieve uw achternaam in te vullen")]
+        [Display(Name = "Achternaam")]
         public string LastName { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Een Emailadres in vullen is verplicht")]
+        [EmailAddress(ErrorMessage = "Geen geldig email adres")]
         public string Email { get; set; }
+
+        [Display(Name = "Telefoonnummer")]
         public string Phone { get; set; }
-        public string Adress { get; set; }
+
+        [Display(Name = "Adres")]
+        public string Address { get; set; }
+
+        [Required(ErrorMessage = "Je kan geen leeg bericht op sturen")]
+        [Display(Name = "Bericht")]
         public string Description { get; set; }
     }
 }
