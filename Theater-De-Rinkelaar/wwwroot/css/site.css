@@ -29,6 +29,16 @@
     height: 140px;
     width: 140px;
     border: 4px solid #7B0D1E;
+    /*margin-top: 15px;
+    margin-left: 15px;*/
+}
+
+.toplogoa {
+    border-radius: 30px;
+    align-self: center;
+    height: 180px;
+    width: 140px;
+    /*border: 4px solid #7B0D1E;*/ 
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -108,7 +118,7 @@
     font-family: 'Rhodium Libre', serif;
     position: relative;
     text-align: center;
-    bottom: 40px;
+    top: -60px;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -292,7 +302,7 @@ td {
 
 /*Errorbericht van contactpagina*/
 .contactform .field-validation-error {
-    color: red;
+    color: white;
     margin-left: 10px;
 }
 
