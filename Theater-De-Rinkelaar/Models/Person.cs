@@ -17,7 +17,7 @@ namespace Theater_De_Rinkelaar.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "<--Een Emailadres in vullen is verplicht")]
-        [EmailAddress(ErrorMessage = "Geen geldig email adres")]
+        [EmailAddress(ErrorMessage = "<--Geen geldig email adres")]
         public string Email { get; set; }
 
         [Display(Name = "Telefoonnummer")]

@@ -64,6 +64,7 @@
     border-width: 2px;
     border-radius: 10px;
     background-color: #9F2042;
+
 }
 
 
@@ -323,6 +324,28 @@ td {
     border: 5px solid #000000;
     border-radius: 21px;
 }
+
+
+
+.columncp input[type=submit] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 17px;
+    border: 5px solid #000000;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #7B0D1E;
+    color: #F8E5EE;
+}
+
+.columncp input[type=submit]:hover {
+    background-color: #ddd;
+    color: black;
+    border: 5px solid #000000;
+}
+
+
 
 /*footer css*/
 .footer {
