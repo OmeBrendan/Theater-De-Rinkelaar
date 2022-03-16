@@ -325,7 +325,11 @@ td {
     border-radius: 21px;
 }
 
-
+.columncp input[type=text] {
+    border-radius: 10px;
+    background-color: #9F2042;
+    color: white;
+}
 
 .columncp input[type=submit] {
     padding: 6px;
@@ -342,7 +346,7 @@ td {
 .columncp input[type=submit]:hover {
     background-color: #ddd;
     color: black;
-    border: 5px solid #000000;
+    border: 2px solid #000000;
 }
 
 
