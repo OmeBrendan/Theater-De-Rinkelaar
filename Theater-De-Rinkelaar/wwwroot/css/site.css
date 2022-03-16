@@ -234,7 +234,7 @@ body {
 /*fotovakje op home-pagina*/
 .fotos1 {
     flex-grow: 1;
-    height: 250px;
+    height: 500px;
     width: 40%;
     background-color: #9F2042;
     padding: 40px 10px;
@@ -311,7 +311,7 @@ td {
 /*tweede fotovakje op home-pagina*/
 .fotos2 {
     flex-grow: 1;
-    height: 250px;
+    height: 500px;
     width: 40%;
     background-color: #9F2042;
     padding: 40px 10px;
