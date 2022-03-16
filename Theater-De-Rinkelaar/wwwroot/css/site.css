@@ -60,10 +60,11 @@
     margin-top: 8px;
     margin-right: 20px;
     font-size: 17px;
-    border: solid;
+    border: solid black;
     border-width: 2px;
     border-radius: 10px;
     background-color: #9F2042;
+    color: white;
 
 }
 
@@ -327,8 +328,27 @@ td {
 
 .columncp input[type=text] {
     border-radius: 10px;
-    background-color: #9F2042;
-    color: white;
+    background-color: #f8e5eeb9;
+    height: 40px;
+    width: 300px;
+    margin: 5px;
+    font-size: 20px;
+    color: #450913;
+}
+
+.form-group2 input[type=text] {
+    border-radius: 10px;
+    background-color: #f8e5eeb9;
+    height: 100px;
+    width: 300px;
+    margin: 5px;
+    font-size: 15px;
+    padding-bottom: 80px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #450913;
 }
 
 .columncp input[type=submit] {
