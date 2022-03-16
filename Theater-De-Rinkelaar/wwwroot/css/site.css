@@ -326,6 +326,7 @@ td {
     border-radius: 21px;
 }
 
+
 .columncp input[type=text] {
     border-radius: 10px;
     background-color: #f8e5eeb9;
@@ -335,6 +336,25 @@ td {
     font-size: 20px;
     color: #450913;
 }
+
+.fotos3 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://www.deameland.nl/wp-content/uploads/2020/08/rondvaart_europoort_de_ameland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65% 50%;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
 
 .form-group2 input[type=text] {
     border-radius: 10px;
@@ -368,7 +388,6 @@ td {
     color: black;
     border: 2px solid #000000;
 }
-
 
 
 /*footer css*/
