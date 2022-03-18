@@ -224,6 +224,10 @@ body {
     border-radius: 14px;
 }
 
+.link {
+    color: #F8E5EE;
+}
+
 /* Change the color of links on hover */
 .column a:hover {
     background-color: #ddd;
