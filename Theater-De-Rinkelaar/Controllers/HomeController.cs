@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Theater_De_Rinkelaar.Models;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Theater_De_Rinkelaar.Database;
+using Theater_De_Rinkelaar.Databases;
 
 namespace Theater_De_Rinkelaar.Controllers
 {    
@@ -22,11 +24,35 @@ namespace Theater_De_Rinkelaar.Controllers
 
         public IActionResult Index()
         {
-            // alle namen ophalen
-            var names = GetNames();
+            // lijst met producten ophalen
+            var products = GetAllProducts();
 
-            // stop de namen in de html
-            return View(names);
+            // de lijst met producten in de html stoppen
+            return View(products);
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from product");
+
+            // lijst maken om alle producten in te stoppen
+            List<Product> products = new List<Product>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Prijs = row["prijs"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Id = Convert.ToInt32(row["id"]);
+
+                // en dat product voegen we toe aan de lijst met producten
+                products.Add(p);
+            }
+
+            return products;
         }
 
         [Route("Agenda")]
@@ -104,5 +130,8 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+       
     }
+
 }
