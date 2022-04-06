@@ -68,9 +68,11 @@
 </div>
 <div>
     <h1>beschrijving</h1>
-    @foreach (string naam in Model)
+    <ul>
+    @foreach (var product in Model)
     {
-        <p>@naam</p>
+      <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
     }
+    </ul>
 </div>
 
