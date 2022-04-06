@@ -209,7 +209,7 @@ body {
 }
 
 /*css voor knoppen in flexvakjes*/
-.column a {
+.knop {
     display: flex;
     width: 55%;
     object-position: center;
@@ -225,15 +225,15 @@ body {
     border-radius: 14px;
 }
 
-.link {
-    color: #F8E5EE;
-}
+    .knop:hover {
+        background-color: #ddd;
+        color: black;
+    }
 
-/* Change the color of links on hover */
-.column a:hover {
-    background-color: #ddd;
-    color: black;
-}
+    .link {
+        color: #F8E5EE;
+    }
+
 
 /*fotovakje op home-pagina*/
 .fotos1 {
@@ -402,3 +402,18 @@ td {
     font-family: 'Rhodium Libre', serif;
 }
 
+.footer knop a{
+    display: flex;
+    width: 55%;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 28px;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
