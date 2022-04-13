@@ -58,13 +58,31 @@ namespace Theater_De_Rinkelaar.Controllers
         [Route("Agenda")]
         public IActionResult Agenda()
         {
-            return View();
+            {
+                // lijst met producten ophalen
+                var products = GetAllProducts();
+
+                // de lijst met producten in de html stoppen
+                return View(products);
+            }
         }
 
         [Route("InformatieTheater")]
         public IActionResult InformatieTheater()
         {
             return View();
+        }
+
+        [Route("OnzeVoorstellingen")]
+        public IActionResult OnzeVoorstellingen()
+        {
+            {
+                // lijst met producten ophalen
+                var products = GetAllProducts();
+
+                // de lijst met producten in de html stoppen
+                return View(products);
+            }
         }
 
         [Route("Contact")]

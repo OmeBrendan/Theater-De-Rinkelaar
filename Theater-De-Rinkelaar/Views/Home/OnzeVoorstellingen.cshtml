@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Onze Voorstellingen";
+    ViewData["activeTab"] = "Voorstellingen";
+}
+
+
+
+
+    <ul>
+@foreach (var product in Model)
+{
+    <div class="row">
+        <div class="column">
+        <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
+        </div>
+    </div>
+}
+</ul>

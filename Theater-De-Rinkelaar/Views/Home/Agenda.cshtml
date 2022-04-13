@@ -2,11 +2,21 @@
     ViewData["Title"] = "Agenda";
     ViewData["activeTab"] = "agenda";
 }
+@using Theater_De_Rinkelaar.Databases
+@model List<Product> 
 
-<div class="row">
-    <div class="column" style="background-color:blue;">Agenda-dingen</div>
-    <div class="column" style="background-color:blueviolet;">Agenda-dingen</div>
-</div>
+
+<ul>
+@foreach (var product in Model)
+{
+    <div class="row">
+        <div class="column">
+        <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
+        </div>
+    </div>
+}
+</ul>
+
 
 <div class="row">
     <div class="column" style="background-color:blue;">Agenda-dingen</div>
