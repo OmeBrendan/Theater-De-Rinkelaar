@@ -34,7 +34,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Product> GetAllProducts()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows("select * from voorstellingen ORDER BY datum");
 
             // lijst maken om alle producten in te stoppen
             List<Product> products = new List<Product>();
@@ -44,8 +44,8 @@ namespace Theater_De_Rinkelaar.Controllers
                 // Voor elke rij maken we nu een product
                 Product p = new Product();
                 p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Beschrijving = row["beschrijving"].ToString();
+                p.Datum = row["datum"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
