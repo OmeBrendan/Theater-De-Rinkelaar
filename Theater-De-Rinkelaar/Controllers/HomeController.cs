@@ -34,7 +34,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Product> GetAllProducts()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstellingen ORDER BY datum");
+            var rows = DatabaseConnector.GetRows("select * from agenda ORDER BY datum");
 
             // lijst maken om alle producten in te stoppen
             List<Product> products = new List<Product>();
