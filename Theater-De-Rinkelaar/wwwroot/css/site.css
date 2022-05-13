@@ -388,7 +388,22 @@ td {
 .form-group2 input[type=text] {
     border-radius: 10px;
     background-color: #f8e5eeb9;
-    height: 100px;
+    height: 150px;
+    width: 300px;
+    margin: 5px;
+    font-size: 15px;
+    padding-bottom: 80px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #450913;
+}
+
+.form-group2 {
+    border-radius: 10px;
+    background-color: #f8e5eeb9;
+    height: 150px;
     width: 300px;
     margin: 5px;
     font-size: 15px;

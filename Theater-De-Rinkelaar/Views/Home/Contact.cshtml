@@ -18,6 +18,7 @@
 
 <div class="row">
     <div class="columncp">
+        <h3>Alle dingen met een asterisk dienen ingevuld te worden.</h3>
         <form method="post" class="contactform">
             <div type=text class="form-group">
                 @Html.LabelFor(m => m.FirstName)
@@ -41,22 +42,31 @@
                 @Html.TextBoxFor(m => m.Phone)
                 @Html.ValidationMessageFor(m => m.Phone)
             </div>
-
+            
             <div type=text class="form-group">
                 @Html.LabelFor(m => m.Address)
                 @Html.TextBoxFor(m => m.Address)
                 @Html.ValidationMessageFor(m => m.Address)
             </div>
-
+            @*
             <div type=text class="form-group2">
                 @Html.LabelFor(m => m.Description)
                 @Html.TextBoxFor(m => m.Description)
                 @Html.ValidationMessageFor(m => m.Description)
+            </div>
+            *@
+            <div>               
+                    @Html.LabelFor(m => m.Description)
+                    @Html.TextBoxFor(m => m.Description)
+                    @Html.ValidationMessageFor(m => m.Description)
+                    <textarea type=text class="form-group2"></textarea>
             </div>
 
             <div class="verstuurknop">
                 <input type="submit" value="Verstuur Bericht" />
             </div>
         </form>
+        
     </div>
 </div>
+

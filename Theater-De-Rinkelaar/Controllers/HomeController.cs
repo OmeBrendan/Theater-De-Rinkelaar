@@ -3,16 +3,13 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Theater_De_Rinkelaar.Models;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using Theater_De_Rinkelaar.Database;
 using Theater_De_Rinkelaar.Databases;
 
 namespace Theater_De_Rinkelaar.Controllers
-{    
+{
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -105,6 +102,38 @@ namespace Theater_De_Rinkelaar.Controllers
         public IActionResult Succes()
         {
             return View();
+        }
+
+        [Route("voorstelling/{id}")]
+        public IActionResult VoorstellingenDetails(int id)
+        {
+            var voorstelling = GetProduct(id);
+
+            return View();
+        }
+
+        public Product GetProduct(int id)
+        {
+            // product ophalen uit de database op basis van het idee
+            var rows = DatabaseConnector.GetRows($"select * from agenda where id = {id}");
+
+            // lijst maken om alle producten in te stoppen
+            List<Product> products = new List<Product>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Beschrijving = row["beschrijving"].ToString();
+                p.Datum = row["datum"].ToString();
+                p.Id = Convert.ToInt32(row["id"]);
+
+                // en dat product voegen we toe aan de lijst met producten
+                products.Add(p);
+            }
+
+            return products[0];
         }
 
         public List<string> GetNames()
