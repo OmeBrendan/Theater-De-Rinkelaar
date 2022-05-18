@@ -235,10 +235,18 @@ body {
         color: #F8E5EE;
     }
 
+.logo {
+    width: 2%;
+    height: 2%;
+}
+    
+    .logo:hover {
+        mask-image: image-set(img/instagram-logo-active.png)
+    }
+
 .miniknop {
-    display: flex;
     width: 30%;
-    object-position: center;
+    object-position: left;
     flex-grow: 1;
     background: #7B0D1E;
     color: #F8E5EE;
@@ -247,7 +255,7 @@ body {
     margin: auto;
     text-decoration: none;
     font-size: 15px;
-    border: 6px solid #000000;
+    border: 3px solid #000000;
     border-radius: 10px;
 }
 
@@ -456,4 +464,12 @@ td {
     font-size: 28px;
     border: 6px solid #000000;
     border-radius: 14px;
+}
+
+.footer tr{
+    display: flex;
+}
+
+.footer td{
+    flex-grow: 1;
 }

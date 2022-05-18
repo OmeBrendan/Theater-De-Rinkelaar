@@ -135,7 +135,7 @@ namespace Theater_De_Rinkelaar.Controllers
 
             return products[0];
         }
-
+         
         public List<string> GetNames()
         {
             // stel in waar de database gevonden kan worden
