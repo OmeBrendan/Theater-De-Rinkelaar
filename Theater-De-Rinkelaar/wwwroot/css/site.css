@@ -235,14 +235,7 @@ body {
         color: #F8E5EE;
     }
 
-.logo {
-    width: 2%;
-    height: 2%;
-}
-    
-    .logo:hover {
-        mask-image: image-set(img/instagram-logo-active.png)
-    }
+
 
 .miniknop {
     width: 30%;
