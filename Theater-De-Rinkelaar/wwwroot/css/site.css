@@ -235,10 +235,11 @@ body {
         color: #F8E5EE;
     }
 
+
+
 .miniknop {
-    display: flex;
     width: 30%;
-    object-position: center;
+    object-position: left;
     flex-grow: 1;
     background: #7B0D1E;
     color: #F8E5EE;
@@ -247,7 +248,7 @@ body {
     margin: auto;
     text-decoration: none;
     font-size: 15px;
-    border: 6px solid #000000;
+    border: 3px solid #000000;
     border-radius: 10px;
 }
 
@@ -388,7 +389,22 @@ td {
 .form-group2 input[type=text] {
     border-radius: 10px;
     background-color: #f8e5eeb9;
-    height: 100px;
+    height: 150px;
+    width: 300px;
+    margin: 5px;
+    font-size: 15px;
+    padding-bottom: 80px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #450913;
+}
+
+.form-group2 {
+    border-radius: 10px;
+    background-color: #f8e5eeb9;
+    height: 150px;
     width: 300px;
     margin: 5px;
     font-size: 15px;
@@ -441,4 +457,12 @@ td {
     font-size: 28px;
     border: 6px solid #000000;
     border-radius: 14px;
+}
+
+.footer tr{
+    display: flex;
+}
+
+.footer td{
+    flex-grow: 1;
 }
