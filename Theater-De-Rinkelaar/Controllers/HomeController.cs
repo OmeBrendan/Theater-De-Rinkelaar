@@ -28,10 +28,11 @@ namespace Theater_De_Rinkelaar.Controllers
             return View(products);
         }
 
-        public List<Product> GetAllProducts()
+
+    public List<Product> GetAllProducts()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("SELECT agenda.id, naam, datum, beschrijvingkort FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, tijd FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
 
             // lijst maken om alle producten in te stoppen
             List<Product> products = new List<Product>();
@@ -41,8 +42,11 @@ namespace Theater_De_Rinkelaar.Controllers
                 // Voor elke rij maken we nu een product
                 Product p = new Product();
                 p.Naam = row["naam"].ToString();
-                p.Beschrijving = row["beschrijvingkort"].ToString();
+                p.Beschrijvingkort = row["beschrijvingkort"].ToString();
+                p.Beschrijvinglang = row["beschrijvinglang"].ToString();
                 p.Datum = row["datum"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Tijd = row["tijd"].ToString(); 
                 p.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
@@ -125,7 +129,8 @@ namespace Theater_De_Rinkelaar.Controllers
                 // Voor elke rij maken we nu een product
                 Product p = new Product();
                 p.Naam = row["naam"].ToString();
-                p.Beschrijving = row["beschrijving"].ToString();
+                p.Beschrijvingkort = row["beschrijvingkort"].ToString();
+                p.Beschrijvinglang = row["beschrijvinglang"].ToString(); 
                 p.Datum = row["datum"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 

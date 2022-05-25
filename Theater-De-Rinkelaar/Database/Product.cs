@@ -12,9 +12,15 @@ namespace Theater_De_Rinkelaar.Databases
 
         public string? Naam { get; set; }
 
-        public string? Beschrijving { get; set; }
+        public string? Beschrijvingkort { get; set; }
+
+        public string? Beschrijvinglang { get; set; }
 
         public string Datum { get; set; }
+
+        public int Beschikbaarheid { get; set; }
+
+        public string? Tijd { get; set; }
     }
 
     
