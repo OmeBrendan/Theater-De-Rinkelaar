@@ -31,7 +31,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Product> GetAllProducts()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from agenda ORDER BY datum");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, naam, datum, beschrijvingkort FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
 
             // lijst maken om alle producten in te stoppen
             List<Product> products = new List<Product>();
@@ -41,7 +41,7 @@ namespace Theater_De_Rinkelaar.Controllers
                 // Voor elke rij maken we nu een product
                 Product p = new Product();
                 p.Naam = row["naam"].ToString();
-                p.Beschrijving = row["beschrijving"].ToString();
+                p.Beschrijving = row["beschrijvingkort"].ToString();
                 p.Datum = row["datum"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 
@@ -104,12 +104,12 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
-        [Route("voorstelling/{id}")]
+        [Route("product/{id}")]
         public IActionResult VoorstellingenDetails(int id)
         {
-            var voorstelling = GetProduct(id);
+            var product = GetProduct(id);
 
-            return View();
+            return View(product);
         }
 
         public Product GetProduct(int id)
