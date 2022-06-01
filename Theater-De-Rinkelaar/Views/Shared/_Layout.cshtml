@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
 </head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <body>
 
     <div class="header">
@@ -29,6 +31,7 @@
     </div>
 
 
+
     <div id="navbar">
         <a class="@if (ViewData["activeTab"] == "home") { <text>active</text>}" href="/">Home</a>
         <a class="@if (ViewData["activeTab"] == "agenda") { <text>active</text>}" href="Agenda">Agenda</a>
@@ -40,8 +43,11 @@
 
 
 
-    @RenderBody()
-<div class="footer">
+    
+    <div class='article'>
+        @RenderBody()
+
+        <div class="footer">
     <a  class="botlogoa" href="/">
             <img class=botlogo alt="Homeknop" src="img/logo.png" onMouseOver="this.src='img/logo-active.png'" onMouseOut="this.src='img/logo.png'">
              </a>
@@ -69,6 +75,9 @@
     </table>
     <br style="clear:both" />    
 </div>
+
+    </div>
+
 
 </body>
 </html>
