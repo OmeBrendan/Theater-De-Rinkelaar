@@ -29,24 +29,26 @@ namespace Theater_De_Rinkelaar.Controllers
         }
 
 
-    public List<Product> GetAllProducts()
+    public List<Voorstelling> GetAllProducts()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, tijd FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
 
             // lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            List<Voorstelling> products = new List<Voorstelling>();
 
             foreach (var row in rows)
             {
                 // Voor elke rij maken we nu een product
-                Product p = new Product();
+                Voorstelling p = new Voorstelling();
                 p.Naam = row["naam"].ToString();
                 p.Beschrijvingkort = row["beschrijvingkort"].ToString();
                 p.Beschrijvinglang = row["beschrijvinglang"].ToString();
                 p.Datum = row["datum"].ToString();
                 p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Tijd = row["tijd"].ToString(); 
+                p.Begintijd = row["begintijd"].ToString();
+                p.Eindtijd = row["eindtijd"].ToString();
+                p.Duur = row["duur"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
@@ -108,26 +110,26 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
-        [Route("product/{id}")]
-        public IActionResult VoorstellingenDetails(int id)
+        [Route("voorstelling/{id}")]
+        public IActionResult VoorstellingDetails(int id)
         {
-            var product = GetProduct(id);
+            var voorstelling = GetVoorstelling(id);
 
-            return View(product);
+            return View(voorstelling);
         }
 
-        public Product GetProduct(int id)
+        public Voorstelling GetVoorstelling(int id)
         {
             // product ophalen uit de database op basis van het idee
-            var rows = DatabaseConnector.GetRows($"select * from agenda where id = {id}");
+            var rows = DatabaseConnector.GetRows($"select * from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id where agenda.id = {id}");
 
             // lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
 
             foreach (var row in rows)
             {
                 // Voor elke rij maken we nu een product
-                Product p = new Product();
+                Voorstelling p = new Voorstelling();
                 p.Naam = row["naam"].ToString();
                 p.Beschrijvingkort = row["beschrijvingkort"].ToString();
                 p.Beschrijvinglang = row["beschrijvinglang"].ToString(); 
@@ -135,10 +137,10 @@ namespace Theater_De_Rinkelaar.Controllers
                 p.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
-                products.Add(p);
+                voorstellingen.Add(p);
             }
 
-            return products[0];
+            return voorstellingen[0];
         }
          
         public List<string> GetNames()

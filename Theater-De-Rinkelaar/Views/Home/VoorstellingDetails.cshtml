@@ -1,0 +1,14 @@
+﻿@using Theater_De_Rinkelaar.Databases
+@model Voorstelling
+@{
+   
+    ViewData["Title"] = Model.Datum;
+    ViewData["activeTab"] = "agenda";
+}
+<div class="row">
+  <div class="column">
+        <h1></h1>
+        <h2>@Model.Datum - @Model.Naam</h2>
+        <p>@Model.Beschrijvinglang</p>
+  </div>
+</div>

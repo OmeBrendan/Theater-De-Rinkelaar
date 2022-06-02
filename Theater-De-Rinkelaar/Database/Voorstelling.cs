@@ -6,7 +6,7 @@ using Theater_De_Rinkelaar.Database;
 
 namespace Theater_De_Rinkelaar.Databases
 {
-    public class Product
+    public class Voorstelling
     {
         public int Id { get; set; }
 
@@ -20,7 +20,9 @@ namespace Theater_De_Rinkelaar.Databases
 
         public int Beschikbaarheid { get; set; }
 
-        public string? Tijd { get; set; }
+        public string? Begintijd { get; set; }
+        public string? Eindtijd { get; set; }
+        public string? Duur { get; set; }
     }
 
     

@@ -3,7 +3,7 @@
     ViewData["activeTab"] = "agenda";
 }
 @using Theater_De_Rinkelaar.Databases
-@model List<Product> 
+@model List<Voorstelling> 
 
 
 <ul>
@@ -11,8 +11,9 @@
 {
     <div class="row">
         <div class="column">
-        <li><h1>@product.Datum @product.Tijd :</h1><h2>@product.Naam</h2> <br> @product.Beschrijvingkort <br> er zijn nog @product.Beschikbaarheid kaartjes</li>
-        </div>
+        <li><h1>@product.Datum van @product.Begintijd tot @product.Eindtijd :</h1><h2>@product.Naam</h2> <br> @product.Beschrijvingkort <br> er zijn nog @product.Beschikbaarheid kaartjes</li>
+        <a class=knop href="/voorstelling/@product.Id">Koop snel kaartjes!</a>
+    </div>
     </div>
 }
 </ul>

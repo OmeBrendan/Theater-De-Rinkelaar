@@ -1,17 +1,33 @@
-﻿.article {
+﻿/*fancy code die header fixed maakt*/
+/*.article {
     overflow-y: scroll;
     height: calc(100vh - 340px);
     display: block;
 }
 
-body{
+body {
     height: 100vh;
     overflow-y: hidden;
 }
-
+*/
 p {
     font-family: 'Rhodium Libre', serif;
     color: #ffffff;
+    font-size: 1vw;
+}
+
+h1{
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+
+
+.voorstellingtekst {
+    text-align: left;
 }
 
 * {
@@ -128,19 +144,30 @@ p {
     .header input[type=text] {
         border: 1px solid #ccc;
     }
-}
 
-.bigtext {
-    font-size: 60px;
-    font-family: 'Rhodium Libre', serif;
-    position: relative;
-    text-align: center;
-    top: -60px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    .bigtext {
+        font-size: 10vw;
+        font-family: 'Rhodium Libre', serif;
+        position: relative;
+        text-align: center;
+        top: -80px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: white;
+    }
 }
-
+@media screen and (max-width: 100vw) {
+    .bigtext {
+        font-size: 5vw;
+        font-family: 'Rhodium Libre', serif;
+        position: relative;
+        text-align: center;
+        top: -80px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+}
 
 body {
     background-color: #F8E5EE;
@@ -148,7 +175,7 @@ body {
 }
 
 /* Achtergrondkleur van navigatiebalk */
-#navbar {
+#mynavbar {
     height: 120px;
     background: #211103;
     overflow: hidden;
@@ -159,7 +186,7 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-#navbar a {
+#mynavbar a {
     flex-grow: 1;
     display:block;
     background: #7B0D1E;
@@ -169,23 +196,29 @@ body {
     padding: 25px 15px;
     margin: 0.5% 1%;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.5vw;
     border-radius: 14px;
 }
 
 /* Change the color of links on hover */
-#navbar a:hover {
+#mynavbar a:hover {
     background-color: #ddd;
     color: black;
 }
 
 /* Add a color to the active/current link */
-#navbar a.active {
+#mynavbar a.active {
     background-color: #B5264C;
     color: white;
     border-radius: 14px 14px 0px 0px;
     margin: 0.5% 1% 0% 1%;
 }
+
+.navbar .icon {
+    display: none;
+}
+
+
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
