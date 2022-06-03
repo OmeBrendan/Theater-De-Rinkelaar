@@ -18,7 +18,7 @@
             
             @*<input type="image" src="https://i.imgur.com/daOvtF6.png" class="toplogo"/>*@
             <a  class="toplogoa" href="/">
-            <img class=toplogo alt="Homeknop" src="img/logo.png" onMouseOver="this.src='img/logo-active.png'" onMouseOut="this.src='img/logo.png'">
+            @*<img class=toplogo alt="Homeknop" src="img/logo.png" onMouseOver="this.src='img/logo-active.png'" onMouseOut="this.src='img/logo.png'">*@
              </a>
             <div class="zoekbalk" style="float: right;">
                 <form action="hiermoetduszegmaarshitnaardatabase">
@@ -34,10 +34,10 @@
 
     <div class="navbar" id="mynavbar">
         <a class="@if (ViewData["activeTab"] == "home") { <text>active</text>}" href="/">Home</a>
-        <a class="@if (ViewData["activeTab"] == "agenda") { <text>active</text>}" href="Agenda">Agenda</a>
-        <a class="@if (ViewData["activeTab"] == "info") { <text>active</text>}" href="InformatieTheater">Informatie Theater</a>
-        <a class="@if (ViewData["activeTab"] == "Voorstellingen") { <text>active</text>}" href="OnzeVoorstellingen">Onze Voorstellingen</a>
-        <a class="@if (ViewData["activeTab"] == "contact") { <text>active</text>}" href="Contact">Contact</a>
+        <a class="@if (ViewData["activeTab"] == "agenda") { <text>active</text>}" href="/Agenda">Agenda</a>
+        <a class="@if (ViewData["activeTab"] == "info") { <text>active</text>}" href="/InformatieTheater">Informatie Theater</a>
+        <a class="@if (ViewData["activeTab"] == "Voorstellingen") { <text>active</text>}" href="/OnzeVoorstellingen">Onze Voorstellingen</a>
+        <a class="@if (ViewData["activeTab"] == "contact") { <text>active</text>}" href="/Contact">Contact</a>
         
     </div>
 

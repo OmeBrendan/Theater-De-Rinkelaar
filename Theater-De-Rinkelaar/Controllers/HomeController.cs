@@ -22,40 +22,31 @@ namespace Theater_De_Rinkelaar.Controllers
         public IActionResult Index()
         {
             // lijst met producten ophalen
-            var products = GetAllProducts();
+            var products = GetAllVoorstellingen();
 
             // de lijst met producten in de html stoppen
             return View(products);
         }
 
 
-    public List<Voorstelling> GetAllProducts()
+    public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
             var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
 
             // lijst maken om alle producten in te stoppen
-            List<Voorstelling> products = new List<Voorstelling>();
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
 
             foreach (var row in rows)
             {
                 // Voor elke rij maken we nu een product
-                Voorstelling p = new Voorstelling();
-                p.Naam = row["naam"].ToString();
-                p.Beschrijvingkort = row["beschrijvingkort"].ToString();
-                p.Beschrijvinglang = row["beschrijvinglang"].ToString();
-                p.Datum = row["datum"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Begintijd = row["begintijd"].ToString();
-                p.Eindtijd = row["eindtijd"].ToString();
-                p.Duur = row["duur"].ToString();
-                p.Id = Convert.ToInt32(row["id"]);
+                Voorstelling p = GetVoorstellingFromRow(row);
 
                 // en dat product voegen we toe aan de lijst met producten
-                products.Add(p);
+                voorstellingen.Add(p);
             }
 
-            return products;
+            return voorstellingen;
         }
 
         [Route("Agenda")]
@@ -63,7 +54,7 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             {
                 // lijst met producten ophalen
-                var products = GetAllProducts();
+                var products = GetAllVoorstellingen();
 
                 // de lijst met producten in de html stoppen
                 return View(products);
@@ -81,7 +72,7 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             {
                 // lijst met producten ophalen
-                var products = GetAllProducts();
+                var products = GetAllVoorstellingen();
 
                 // de lijst met producten in de html stoppen
                 return View(products);
@@ -124,25 +115,26 @@ namespace Theater_De_Rinkelaar.Controllers
             var rows = DatabaseConnector.GetRows($"select * from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id where agenda.id = {id}");
 
             // lijst maken om alle producten in te stoppen
-            List<Voorstelling> voorstellingen = new List<Voorstelling>();
+            Voorstelling voorstelling = GetVoorstellingFromRow(rows[0]);
 
-            foreach (var row in rows)
-            {
-                // Voor elke rij maken we nu een product
-                Voorstelling p = new Voorstelling();
-                p.Naam = row["naam"].ToString();
-                p.Beschrijvingkort = row["beschrijvingkort"].ToString();
-                p.Beschrijvinglang = row["beschrijvinglang"].ToString(); 
-                p.Datum = row["datum"].ToString();
-                p.Id = Convert.ToInt32(row["id"]);
-
-                // en dat product voegen we toe aan de lijst met producten
-                voorstellingen.Add(p);
-            }
-
-            return voorstellingen[0];
+            return voorstelling;
         }
-         
+
+        private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
+        {
+            Voorstelling p = new Voorstelling();
+            p.Naam = row["naam"].ToString();
+            p.Beschrijvingkort = row["beschrijvingkort"].ToString();
+            p.Beschrijvinglang = row["beschrijvinglang"].ToString();
+            p.Datum = row["datum"].ToString();
+            p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+            p.Begintijd = row["begintijd"].ToString();
+            p.Eindtijd = row["eindtijd"].ToString();
+            p.Duur = row["duur"].ToString();
+            p.Id = Convert.ToInt32(row["id"]);
+
+            return p;
+        }
         public List<string> GetNames()
         {
             // stel in waar de database gevonden kan worden
