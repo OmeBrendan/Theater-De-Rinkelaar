@@ -1,7 +1,7 @@
 ﻿/*fancy code die header fixed maakt*/
 /*.article {
     overflow-y: scroll;
-    height: calc(100vh - 340px);
+    height: calc(100vh - 300px);
     display: block;
 }
 
@@ -36,7 +36,7 @@ h3 {
 
 .header {
     justify-content: space-between;
-    height: 220px;
+    height: 180px;
     background-color: darkred;
     background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
     /*background-image: url("Theater-De-Rinkelaar/wwwroot/img/theater-header.jpg");*/
@@ -45,9 +45,7 @@ h3 {
     background-size: cover;
 }
 
-.nav-up {
-    top: -220px;
-}
+
 
 .flexboxplswerk {
     display: flex;
@@ -67,12 +65,12 @@ h3 {
 .toplogoa {
     border-radius: 30px;
     align-self: center;
-    height: 180px;
+    height: 200px;
     width: 140px;
-    /*border: 4px solid #7B0D1E;*/ 
+    /*border: 4px solid #7B0D1E;*/
     margin-top: 15px;
     margin-left: 15px;
-}
+} 
 
 .botlogo {
     border-radius: 30px;
