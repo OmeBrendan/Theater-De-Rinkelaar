@@ -259,7 +259,7 @@ body {
 /*css voor knoppen in flexvakjes*/
 .knop {
     display: flex;
-    width: 55%;
+    width: 17vw;
     object-position: center;
     flex-grow: 1;
     background: #7B0D1E;
@@ -268,12 +268,33 @@ body {
     padding: 10px 15px;
     margin: auto;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 1.5vw;
     border: 6px solid #000000;
     border-radius: 14px;
 }
 
     .knop:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.agendaknop {
+    display: flex;
+    width: 20vw;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
+
+    .agendaknop:hover {
         background-color: #ddd;
         color: black;
     }
@@ -344,7 +365,7 @@ body {
 
 /*tijdentabel css*/
 caption {
-    font-size: 30px;
+    font-size: 1.5vw;
     margin-bottom: 5px;
 }
 
@@ -355,10 +376,12 @@ caption {
 
 th {
     font-weight: 900;
+    font-size: 1.1vw;
 }
 
 td {
     font-weight: 200;
+    font-size: 1vw;
 }
 
 /*contactpagina*/
