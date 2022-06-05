@@ -15,6 +15,8 @@ namespace Theater_De_Rinkelaar
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -23,7 +25,11 @@ namespace Theater_De_Rinkelaar
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+
         }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,6 +42,17 @@ namespace Theater_De_Rinkelaar
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == 404)
+                {
+                    context.Request.Path = "/404";
+                    await next();
+                }
+            });
+
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -48,6 +65,12 @@ namespace Theater_De_Rinkelaar
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
+
     }
+
+
 }
+

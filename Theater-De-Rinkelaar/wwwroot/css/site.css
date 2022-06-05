@@ -24,7 +24,9 @@ h3 {
     font-size: 1.5vw;
 }
 
+.errortext {
 
+}
 
 .voorstellingtekst {
     text-align: left;
@@ -244,6 +246,34 @@ body {
 /*css voor 1 flexvakje*/
 .column {
     flex-grow: 1;
+    width: 30%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #F8E5EE;
+    line-break: normal;
+}
+
+.column2 {
+    flex-grow: 2;
+    width: 30%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #F8E5EE;
+    line-break: normal;
+}
+
+.column3 {
+    flex-grow: 3;
     width: 30%;
     background-color: #9F2042;
     padding: 40px 10px;

@@ -109,6 +109,12 @@ namespace Theater_De_Rinkelaar.Controllers
             return View(voorstelling);
         }
 
+        [Route("404")]
+        public IActionResult Error()
+        {
+            return View();
+        }
+
         public Voorstelling GetVoorstelling(int id)
         {
             // product ophalen uit de database op basis van het idee
@@ -171,11 +177,7 @@ namespace Theater_De_Rinkelaar.Controllers
             return names;
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
 
        
     }
