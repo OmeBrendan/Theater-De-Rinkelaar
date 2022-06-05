@@ -90,6 +90,8 @@ namespace Theater_De_Rinkelaar.Controllers
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
+                DatabaseConnector.SavePerson(person);
+
                 return Redirect("/succes");
         
             return View(person);
@@ -110,9 +112,15 @@ namespace Theater_De_Rinkelaar.Controllers
         }
 
         [Route("404")]
-        public IActionResult Error()
+        public IActionResult PaginaNietGevonden()
         {
             return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         public Voorstelling GetVoorstelling(int id)
