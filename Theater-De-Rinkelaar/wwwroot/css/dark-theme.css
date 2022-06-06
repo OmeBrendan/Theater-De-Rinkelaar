@@ -1,0 +1,605 @@
+﻿/*fancy code die header fixed maakt*/
+/*.article {
+    overflow-y: scroll;
+    height: calc(100vh - 300px);
+    display: block;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+*/
+p {
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    font-size: 1vw;
+}
+
+h1{
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+.errortext {
+
+}
+
+.voorstellingtekst {
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    justify-content: space-between;
+    height: 280px;
+    background-color: darkred;
+    background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
+    /*background-image: url("Theater-De-Rinkelaar/wwwroot/img/theater-header.jpg");*/
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.flexboxplswerk {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toplogo {
+    border-radius: 30px;
+    align-self: center;
+    height: 140px;
+    width: 140px;
+    border: 4px solid #7B0D1E;
+    /*margin-top: 15px;
+    margin-left: 15px;*/
+}
+
+.toplogoa {
+    border-radius: 30px;
+    align-self: center;
+    height: 200px;
+    width: 140px;
+    /*border: 4px solid #7B0D1E;*/
+    margin-top: 15px;
+    margin-left: 15px;
+} 
+
+.botlogo {
+    border-radius: 30px;
+    float: right;
+    height: 140px;
+    width: 140px;
+    border: 4px solid #7B0D1E;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/*css voor zoekbalk*/
+
+.header input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 17px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #9F2042;
+    color: white;
+
+}
+
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+
+.header .zoekbalk button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .zoekbalk button:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .header .zoekbalk {
+        float: right;
+    }
+
+    .header a, .header input[type=text], .header .zoekbalk button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .header input[type=text] {
+        border: 1px solid #ccc;
+    }
+
+    .bigtext {
+        font-size: 10vw;
+        font-family: 'Rhodium Libre', serif;
+        position: relative;
+        text-align: center;
+        top: -80px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: white;
+    }
+}
+@media screen and (max-width: 100vw) {
+    .bigtext {
+        font-size: 5vw;
+        font-family: 'Rhodium Libre', serif;
+        position: relative;
+        text-align: center;
+        top: -80px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+}
+
+body {
+    background-color: #332828;
+    margin: 0px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Achtergrondkleur van navigatiebalk */
+#mynavbar {
+    height: 120px;
+    background: #211103;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Rhodium Libre', serif;
+}
+
+/* Style the links inside the navigation bar */
+#mynavbar a {
+    flex-grow: 1;
+    display:block;
+    background: #7B0D1E;
+    width: 21%;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 25px 15px;
+    margin: 0.5% 1%;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 14px;
+}
+
+/* Change the color of links on hover */
+#mynavbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+#mynavbar a.active {
+    background-color: #B5264C;
+    color: white;
+    border-radius: 14px 14px 0px 0px;
+    margin: 0.5% 1% 0% 1%;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+/*zorgt ervoor dat elke rij kan worden ingedeeld in flexvakjes*/
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*css voor 1 flexvakje*/
+.column {
+    flex-grow: 1;
+    width: 30%;
+    background-color: #310a14;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    line-break: normal;
+}
+
+.column2 {
+    flex-grow: 2;
+    width: 30%;
+    background-color: #310a14;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    line-break: normal;
+}
+
+.column3 {
+    flex-grow: 3;
+    width: 30%;
+    background-color: #310a14;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    line-break: normal;
+}
+
+/*css voor knoppen in flexvakjes*/
+.knop {
+    display: flex;
+    width: 17vw;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
+
+    .knop:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.btn-toggle {
+    display: flex;
+    width: 17vw;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
+
+    .btn-toggle:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.agendaknop {
+    display: flex;
+    width: 20vw;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
+
+    .agendaknop:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .link {
+        color: #F8E5EE;
+    }
+
+
+
+.miniknop {
+    width: 30%;
+    object-position: left;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 5px 7px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 15px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+    .miniknop:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.link {
+    color: #F8E5EE;
+}
+
+/*fotovakje op home-pagina*/
+.fotos1 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/IvanVazov_National_Theatre_7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+/*tijdstabel op home-pagina*/
+.tijdencolumn {
+    flex-grow: 1;
+    align-content: center;
+    width: 40%;
+    background-color: #310a14;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: auto;
+    border-radius: 27px;
+    text-align: center;
+    font-size: 20px;
+    color: #bf9801;
+    font-family: 'Rhodium Libre', serif;
+}
+
+/*tijdentabel css*/
+caption {
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+}
+
+.tijden {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    font-weight: 900;
+    font-size: 1.1vw;
+}
+
+td {
+    font-weight: 200;
+    font-size: 1vw;
+}
+
+/*contactpagina*/
+.columncp {
+    flex-grow: 1;
+    width: 30%;
+    background-color: #310a14;
+    padding: 40px 10px;
+    margin: 20px;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+}
+
+.contactform label {
+    width: 200px;
+    display: inline-block;
+}
+
+/*Errorbericht van contactpagina*/
+.contactform .field-validation-error {
+    color: white;
+    margin-left: 10px;
+}
+
+/*tweede fotovakje op home-pagina*/
+.fotos2 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://www.rondvaarteuropoort.nl/wp-content/uploads/2020/03/rederij_ameland_rondvaart_europoort_de_ameland_voorkant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+
+.columncp input[type=text] {
+    border-radius: 10px;
+    background-color: #310a14;
+    height: 40px;
+    width: 300px;
+    margin: 5px;
+    font-size: 20px;
+    color: #450913;
+}
+
+.fotos3 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://www.deameland.nl/wp-content/uploads/2020/08/rondvaart_europoort_de_ameland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65% 50%;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+
+.form-group2 input[type=text] {
+    border-radius: 10px;
+    background-color: #f8e5eeb9;
+    height: 150px;
+    width: 300px;
+    margin: 5px;
+    font-size: 15px;
+    padding-bottom: 80px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #450913;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    background: #9F2042;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7B0D1E;
+    border-radius: 10px;
+}
+
+/*::-webkit-scrollbar-button {
+    width: 20px;
+    height: 150px;
+    background: red;
+}*/
+
+.columncp input[type=submit] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 17px;
+    border: 5px solid #000000;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #7B0D1E;
+    color: #F8E5EE;
+}
+
+.columncp input[type=submit]:hover {
+    background-color: #ddd;
+    color: black;
+    border: 2px solid #000000;
+}
+
+
+/*footer css*/
+.footer {
+    padding: 0% 0.5%;
+    background-color: #3D1308;
+    color: #F8E5EE;
+    font-family: 'Rhodium Libre', serif;
+}
+
+.footer knop a{
+    display: flex;
+    width: 55%;
+    object-position: center;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 28px;
+    border: 6px solid #000000;
+    border-radius: 14px;
+}
+
+.footer tr{
+    display: flex;
+}
+
+.footer td{
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
