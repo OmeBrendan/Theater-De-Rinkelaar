@@ -90,11 +90,12 @@ namespace Theater_De_Rinkelaar.Controllers
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
+            {
                 DatabaseConnector.SavePerson(person);
-
                 return Redirect("/succes");
-        
+            }
             return View(person);
+            
         }
 
         [Route("succes")]
