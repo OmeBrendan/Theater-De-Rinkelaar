@@ -7,6 +7,7 @@ using Theater_De_Rinkelaar.Models;
 using MySql.Data.MySqlClient;
 using Theater_De_Rinkelaar.Database;
 using Theater_De_Rinkelaar.Databases;
+using Microsoft.AspNetCore.Http;
 
 namespace Theater_De_Rinkelaar.Controllers
 {
@@ -25,11 +26,12 @@ namespace Theater_De_Rinkelaar.Controllers
             var products = GetAllVoorstellingen();
 
             // de lijst met producten in de html stoppen
-            return View(products);
+            return View(products);          
         }
 
 
-    public List<Voorstelling> GetAllVoorstellingen()
+
+        public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
             var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
@@ -117,6 +119,8 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             return View();
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
