@@ -13,15 +13,22 @@
         
         
         <h2>@Model.Datum - @Model.Naam</h2>
-        <p>Tickets kopen</p>
+        
         
   </div>
 </div>
 
 <div class="row">
+    
     <div class="column">
+        <h2>Tickets kopen</h2>
         <div class="movie-container">
-
+      <select id="movie">
+        <option value="3">Kind tot 5 jaar (€3)</option>
+        <option value="7">6-18 jaar (€7)</option>
+        <option value="9">18-60 jaar (€9)</option>
+        <option value="5">60+ jaar (€5)</option>
+      </select>
     </div>
 
     <ul class="showcase">
@@ -103,7 +110,11 @@
       </div>
     </div>
 
+     <p class="text">
+      Je hebt <span id="count">0</span> stoelen geselecteerd voor een prijs van <span id="total">0</span> euro
+    </p>
 
+    <a class=agendaknop href="tickets/betalen">Ga door naar het betalen--></a>
 
     <script src="script.js"></script>
     </div>

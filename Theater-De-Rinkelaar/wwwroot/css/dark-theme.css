@@ -254,7 +254,7 @@ body {
     width: 30%;
     background-color: #310a14;
     padding: 40px 10px;
-    margin: 20px;
+    margin: 2vw;
     text-align: center;
     border-radius: 27px;
     font-size: 20px;
@@ -316,7 +316,7 @@ body {
     }
 
 .terugknop {
-    width: 19vw;
+    width: 17vw;
     object-position: left;
     flex-grow: 1;
     background: #7B0D1E;
@@ -325,7 +325,7 @@ body {
     padding: 10px 15px;
     margin: 0 150vh 0 0;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 2vw;
     border: 6px solid #000000;
     border-radius: 14px;
 }
@@ -568,7 +568,7 @@ td {
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-    background: #9F2042;
+    background: #310a14;
 }
 
 /* Handle */
@@ -647,16 +647,27 @@ td {
 }
 
     .movie-container select {
-        background-color: #fff;
+        background-color: #7B0D1E;
+        color: white;
         border: 0;
         border-radius: 5px;
-        font-size: 14px;
+        font-size: 0.7vw;
         margin-left: 10px;
         padding: 5px 15px 5px 15px;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
+        border: 2px solid #000000;
+        height: 3vw;
+        width: 10vw;
     }
+
+        .movie-container select option {
+            background-color: #ddd;
+            color: black;
+            border: 0;
+            border-radius: 500px;
+            font-size: 14px;
+            margin-left: 10px;
+            padding: 5px 15px 5px 15px;
+        }
 
 .container {
     perspective: 1000px;
@@ -665,8 +676,8 @@ td {
 
 .seat {
     background-color: #444451;
-    height: 5vw;
-    width: 6vw;
+    height: 4vw;
+    width: 4.8vw;
     margin: 1vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

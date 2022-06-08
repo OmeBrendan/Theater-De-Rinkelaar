@@ -122,6 +122,14 @@ namespace Theater_De_Rinkelaar.Controllers
             return View(voorstelling);
         }
 
+        [Route("voorstelling/{id}/tickets/betalen")]
+        public IActionResult VoorstellingBetalen(int id)
+        {
+            var voorstelling = GetVoorstelling(id);
+
+            return View(voorstelling);
+        }
+
         [Route("404")]
         public IActionResult PaginaNietGevonden()
         {

@@ -1,0 +1,41 @@
+﻿@using Theater_De_Rinkelaar.Databases
+@model Voorstelling
+@{
+   
+    ViewData["Title"] = Model.Datum;
+    ViewData["activeTab"] = "agenda";
+}
+<div class="row">
+  <div class="column">
+    <h1>betalen</h1>    
+    <script src="script.js"></script>
+    <table>
+        <tr>
+            <td>
+                <h3>kies alstublieft een van de volgende manieren om te betalen</h3>
+            </td>
+            <td>
+                <button class="terugknop" onclick="history.back()"><img class="terugfoto" alt="Terugknop" src="/img/terugpijl.png">Of ga terug </button>
+            </td>
+        </tr>
+        <tr>
+            
+            <td>
+                <a  href="">
+            <img alt="Ideal" src="/img/ideal-logo.png" width="200" height="200" onMouseOver="this.src='/img/ideal-logo-active.png'" onMouseOut="this.src='/img/ideal-logo.png'">
+             </a>
+            </td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+
+
+
+<script src="/js/script.js"></script>
+
+        
+
+
+
