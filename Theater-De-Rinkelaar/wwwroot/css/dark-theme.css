@@ -387,6 +387,16 @@ body {
     color: #F8E5EE;
 }
 
+.agendaplaatje {
+    border-radius: 30px;
+    float: right;
+    height: 300px;
+    width: 300px;
+    border: 4px solid #7B0D1E;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
 /*fotovakje op home-pagina*/
 .fotos1 {
     flex-grow: 1;

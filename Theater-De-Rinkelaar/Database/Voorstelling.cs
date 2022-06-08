@@ -23,6 +23,7 @@ namespace Theater_De_Rinkelaar.Databases
         public string? Begintijd { get; set; }
         public string? Eindtijd { get; set; }
         public string? Duur { get; set; }
+        public string? Plaatje { get; set; }
     }
 
     
