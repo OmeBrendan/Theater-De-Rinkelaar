@@ -6,6 +6,7 @@
     <title> @ViewData["Title"] - Theater_De_Rinkelaar</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="~/css/light-theme.css" id="theme-link" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@
         <tr>
             <td>Neem contact met ons op via TheaterDeRinkelaar@gmail.com</td>
             <td>    
-                <button class="btn-toggle">Toggle Dark-Mode</button>
+                <button class="btn-toggle">donker/licht thema</button>
             </td>
         </tr>
     </table>
@@ -93,10 +94,10 @@
       const theme = document.querySelector("#theme-link");
       btn.addEventListener("click", function() {
         // Swap out the URL for the different stylesheets
-        if (theme.getAttribute("href") == "css/dark-theme.css") {
-          theme.href = "css/light-theme.css";
+        if (theme.getAttribute("href") == "/css/dark-theme.css") {
+          theme.href = "/css/light-theme.css";
         } else {
-          theme.href = "css/dark-theme.css";
+          theme.href = "/css/dark-theme.css";
         }
       });
     </script>

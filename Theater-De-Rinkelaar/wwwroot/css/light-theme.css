@@ -29,8 +29,9 @@ h3 {
 }
 
 .errortext {
-
 }
+
+
 
 .voorstellingtekst {
     text-align: left;
@@ -318,7 +319,7 @@ body {
 
 .terugknop {
 
-    width: 17vw;
+    width: 19vw;
     object-position: left;
     flex-grow: 1;
     background: #7B0D1E;
@@ -327,7 +328,7 @@ body {
     padding: 10px 15px;
     margin: 0 150vh 0 0;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 3vw;
     border: 6px solid #000000;
     border-radius: 14px;
 }
@@ -335,6 +336,7 @@ body {
     .terugknop:hover {
         background-color: #ddd;
         color: black;
+        
     }
 
 .btn-toggle {

@@ -34,7 +34,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, voorstelling_id FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -114,6 +114,14 @@ namespace Theater_De_Rinkelaar.Controllers
             return View(voorstelling);
         }
 
+        [Route("voorstelling/{id}/tickets")]
+        public IActionResult VoorstellingTickets(int id)
+        {
+            var voorstelling = GetVoorstelling(id);
+
+            return View(voorstelling);
+        }
+
         [Route("404")]
         public IActionResult PaginaNietGevonden()
         {
@@ -131,13 +139,14 @@ namespace Theater_De_Rinkelaar.Controllers
         public Voorstelling GetVoorstelling(int id)
         {
             // product ophalen uit de database op basis van het idee
-            var rows = DatabaseConnector.GetRows($"select * from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id where agenda.id = {id}");
+            var rows = DatabaseConnector.GetRows($"select * from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid where agenda.id = {id}");
 
             // lijst maken om alle producten in te stoppen
             Voorstelling voorstelling = GetVoorstellingFromRow(rows[0]);
 
             return voorstelling;
         }
+
 
         private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
         {
@@ -152,6 +161,7 @@ namespace Theater_De_Rinkelaar.Controllers
             p.Duur = row["duur"].ToString();
             p.Id = Convert.ToInt32(row["id"]);
             p.Plaatje = row["plaatje"].ToString();
+            p.VoorstellingId = Convert.ToInt32(row["voorstelling_id"]);
 
             return p;
         }

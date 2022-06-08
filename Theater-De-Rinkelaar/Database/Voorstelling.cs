@@ -10,6 +10,9 @@ namespace Theater_De_Rinkelaar.Databases
     {
         public int Id { get; set; }
 
+        public int VoorstellingId { get; set; }
+        public int Agendaid { get; set; }
+
         public string? Naam { get; set; }
 
         public string? Beschrijvingkort { get; set; }
