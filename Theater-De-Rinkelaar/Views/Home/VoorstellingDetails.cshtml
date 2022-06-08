@@ -8,13 +8,14 @@
 <div class="row">
   <div class="column">
         <h1></h1>
-        <a class="terugknop" href="/agenda">Terug</a><h2>@Model.Datum - @Model.Naam</h2>
+        <form>
+            <input class="terugknop" type="button" value="Ga terug" onclick="history.back()">
+        </form>
+        <h2>@Model.Datum - @Model.Naam</h2>
         <p>@Model.Beschrijvinglang</p>
   </div>
 
 
-        <div>
-            <img class=botlogo alt="Homeknop" src="img/logo.png">
-        </div>
+        
 
 </div>
