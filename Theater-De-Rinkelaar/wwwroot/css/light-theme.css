@@ -465,8 +465,14 @@ caption {
 .tijden {
     margin-left: auto;
     margin-right: auto;
+    display: inline;
+
 }
 
+table {
+    display: flex;
+    justify-content: center;
+}
 th {
     font-weight: 900;
     font-size: 1.1vw;

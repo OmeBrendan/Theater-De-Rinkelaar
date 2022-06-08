@@ -94,11 +94,13 @@
       const theme = document.querySelector("#theme-link");
       btn.addEventListener("click", function() {
         // Swap out the URL for the different stylesheets
+        localStorage.getItem("theme");
         if (theme.getAttribute("href") == "/css/dark-theme.css") {
           theme.href = "/css/light-theme.css";
         } else {
           theme.href = "/css/dark-theme.css";
         }
+        localStorage.setItem("theme", theme.href);
       });
     </script>
 
