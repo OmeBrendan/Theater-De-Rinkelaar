@@ -666,13 +666,14 @@ td {
 .container {
     perspective: 1000px;
     margin-bottom: 30px;
+
 }
 
 .seat {
     background-color: #444451;
-    height: 12px;
-    width: 15px;
-    margin: 3px;
+    height: 5vw;
+    width: 6vw;
+    margin: 1vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -726,21 +727,14 @@ td {
 
 .rij {
     display: flex;
+    justify-content: center;
 }
 
-.screen {
-    background-color: #fff;
-    height: 70px;
-    width: 100%;
-    margin: 15px 0;
-    transform: rotateX(-45deg);
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-}
 
 p.text {
     margin: 5px 0;
 }
 
-    p.text span {
-        color: #6feaf6;
-    }
+p.text span {
+    color: #6feaf6;
+}
