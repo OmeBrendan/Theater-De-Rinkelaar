@@ -91,6 +91,7 @@
 
 
     <script>
+      let x = document.cookie;
       const btn = document.querySelector(".btn-toggle");
       const theme = document.querySelector("#theme-link");
       btn.addEventListener("click", function() {
@@ -98,12 +99,29 @@
         //localStorage.getItem("theme");
         if (theme.getAttribute("href") == "/css/dark-theme.css") {
           theme.href = "/css/light-theme.css";
+          document.cookie = "theme-light";
         } else {
           theme.href = "/css/dark-theme.css";
         }
         //localStorage.setItem("theme", theme.href);
       });
     </script>
+
+    @*<script>
+      let x = document.cookie;
+      const btn = document.querySelector(".btn-toggle");
+      const theme = document.querySelector("#theme-link");
+      btn.addEventListener("click", function() {
+        // Swap out the URL for the different stylesheets
+        if (x == "theme=dark") {
+          theme.href = "/css/light-theme.css";
+          document.cookie = "theme=light";
+        } else {
+          theme.href = "/css/dark-theme.css";
+          document.cookie = "theme=dark";
+        }
+      });
+    </script>*@
 
 
 </body>
