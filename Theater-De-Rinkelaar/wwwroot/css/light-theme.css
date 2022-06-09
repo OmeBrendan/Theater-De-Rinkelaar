@@ -153,9 +153,10 @@ body {
     cursor: pointer;
 }
 
-.header .zoekbalk button:hover {
-    background: #ccc;
-}
+    .header .zoekbalk button:hover {
+        background: #ccc;
+        transform: scale(1.2);
+    }
 
 @media screen and (max-width: 600px) {
     .header .zoekbalk {
@@ -253,10 +254,11 @@ body {
 }
 
 /* Change the color of links on hover */
-#mynavbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
+    #mynavbar a:hover {
+        background-color: #ddd;
+        color: black;
+        transform: scale(0.9);
+    }
 
 /* Add a color to the active/current link */
 #mynavbar a.active {
@@ -380,6 +382,7 @@ body {
     .knop:hover {
         background-color: #ddd;
         color: black;
+        transform: scale(1.2);
     }
 
 .terugknop {
@@ -401,7 +404,7 @@ body {
     .terugknop:hover {
         background-color: #ddd;
         color: black;
-        
+        transform: scale(1.2);
     }
 
 .btn-toggle {
@@ -419,6 +422,7 @@ body {
     .btn-toggle:hover {
         background-color: #414141;
         cursor: pointer;
+        transform: scale(1.2);
     }
 
     .highcontrast {
@@ -447,6 +451,7 @@ body {
     .agendaknop:hover {
         background-color: #ddd;
         color: black;
+        transform: scale(1.2);
     }
 
     .link {
@@ -473,6 +478,7 @@ body {
     .miniknop:hover {
         background-color: #ddd;
         color: black;
+        transform: scale(1.2);
     }
 
 .link {
@@ -497,11 +503,14 @@ body {
     background: #9F2042;
 }
 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #7B0D1E;
     border-radius: 10px;
 }
+
+
 
 /*::-webkit-scrollbar-button {
     width: 20px;

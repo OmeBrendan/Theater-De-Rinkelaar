@@ -163,9 +163,10 @@ body {
     cursor: pointer;
 }
 
-.header .zoekbalk button:hover {
-    background: #ccc;
-}
+    .header .zoekbalk button:hover {
+        background: #ccc;
+        transform: scale(1.2);
+    }
 
 @media screen and (max-width: 600px) {
     .header .zoekbalk {
@@ -253,33 +254,34 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-#mynavbar a {
-    flex-grow: 1;
-    display:block;
-    background: #7B0D1E;
-    width: 21%;
-    color: #F8E5EE;
-    text-align: center;
-    padding: 25px 15px;
-    margin: 0.5% 1%;
-    text-decoration: none;
-    font-size: 1.5vw;
-    border-radius: 14px;
-}
+    #mynavbar a {
+        flex-grow: 1;
+        display: block;
+        background: #3b070f;
+        width: 21%;
+        color: #F8E5EE;
+        text-align: center;
+        padding: 25px 15px;
+        margin: 0.5% 1%;
+        text-decoration: none;
+        font-size: 1.5vw;
+        border-radius: 14px;
+    }
 
 /* Change the color of links on hover */
-#mynavbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
+        #mynavbar a:hover {
+            background-color: #717171;
+            color: black;
+            transform: scale(0.9);
+        }
 
 /* Add a color to the active/current link */
-#mynavbar a.active {
-    background-color: #B5264C;
-    color: white;
-    border-radius: 14px 14px 0px 0px;
-    margin: 0.5% 1% 0% 1%;
-}
+        #mynavbar a.active {
+            background-color: #62162a;
+            color: white;
+            border-radius: 14px 14px 0px 0px;
+            margin: 0.5% 1% 0% 1%;
+        }
 
 .navbar .icon {
     display: none;
@@ -403,6 +405,7 @@ body {
     .knop:hover {
         background-color: #717171;
         color: black;
+        transform: scale(1.2);
     }
 
 .terugknop {
@@ -423,6 +426,7 @@ body {
     .terugknop:hover {
         background-color: #717171;
         color: black;
+        transform: scale(1.2);
     }
 
 .btn-toggle {
@@ -438,6 +442,7 @@ body {
     .btn-toggle:hover {
         background-color: #414141;
         cursor: pointer;
+        transform: scale(1.2);
     }
 
 .highcontrast {
@@ -466,6 +471,7 @@ body {
     .agendaknop:hover {
         background-color: #717171;
         color: black;
+        transform: scale(1.2);
     }
 
     .link {
@@ -492,6 +498,7 @@ body {
     .miniknop:hover {
         background-color: #717171;
         color: black;
+        transform: scale(1.2);
     }
 
 .link {
@@ -620,7 +627,7 @@ body {
 /*footer css*/
 .footer {
     padding: 0% 0.5%;
-    background-color: #3D1308;
+    background-color: #1f0904;
     color: #F8E5EE;
     font-family: 'Rhodium Libre', serif;
 }
