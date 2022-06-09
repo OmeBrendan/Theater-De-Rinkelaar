@@ -239,19 +239,20 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-#mynavbar a {
-    flex-grow: 1;
-    display:block;
-    background: #7B0D1E;
-    width: 21%;
-    color: #F8E5EE;
-    text-align: center;
-    padding: 25px 15px;
-    margin: 0.5% 1%;
-    text-decoration: none;
-    font-size: 1.5vw;
-    border-radius: 14px;
-}
+    #mynavbar a {
+        flex-grow: 1;
+        display: block;
+        background: #7B0D1E;
+        width: 21%;
+        color: #F8E5EE;
+        text-align: center;
+        padding: 25px 15px;
+        margin: 0.5% 1%;
+        text-decoration: none;
+        font-size: 1.5vw;
+        border-radius: 14px;
+        transition: all .2s ease-in-out;
+    }
 
 /* Change the color of links on hover */
     #mynavbar a:hover {
@@ -377,6 +378,7 @@ body {
     font-size: 1.5vw;
     border: 6px solid #000000;
     border-radius: 14px;
+    transition: all .2s ease-in-out;
 }
 
     .knop:hover {
@@ -399,6 +401,7 @@ body {
     font-size: 2vw;
     border: 6px solid #000000;
     border-radius: 14px;
+    transition: all .2s ease-in-out;
 }
 
     .terugknop:hover {
@@ -416,7 +419,7 @@ body {
     padding: 10px 15px;
     border: 6px solid #000000;
     border-radius: 14px;
-
+    transition: all .2s ease-in-out;
 }
 
     .btn-toggle:hover {
@@ -446,6 +449,7 @@ body {
     font-size: 1.5vw;
     border: 6px solid #000000;
     border-radius: 14px;
+    transition: all .2s ease-in-out;
 }
 
     .agendaknop:hover {
@@ -473,6 +477,7 @@ body {
     font-size: 15px;
     border: 3px solid #000000;
     border-radius: 10px;
+    transition: all .2s ease-in-out;
 }
 
     .miniknop:hover {
