@@ -1,14 +1,19 @@
-﻿/*fancy code die header fixed maakt*/
-/*.article {
-    overflow-y: scroll;
-    height: calc(100vh - 300px);
-    display: block;
-}
+﻿/*
 
-body {
-    height: 100vh;
-    overflow-y: hidden;
-}
+██████╗░░█████╗░███╗░░██╗██╗░░██╗███████╗██████╗░  ████████╗██╗░░██╗███████╗███╗░░░███╗░█████╗░   ░█████╗░░██████╗░██████╗
+██╔══██╗██╔══██╗████╗░██║██║░██╔╝██╔════╝██╔══██╗  ╚══██╔══╝██║░░██║██╔════╝████╗░████║██╔══██╗   ██╔══██╗██╔════╝██╔════╝
+██║░░██║██║░░██║██╔██╗██║█████═╝░█████╗░░██████╔╝  ░░░██║░░░███████║█████╗░░██╔████╔██║███████║   ██║░░╚═╝╚█████╗░╚█████╗░
+██║░░██║██║░░██║██║╚████║██╔═██╗░██╔══╝░░██╔══██╗  ░░░██║░░░██╔══██║██╔══╝░░██║╚██╔╝██║██╔══██║   ██║░░██╗░╚═══██╗░╚═══██╗
+██████╔╝╚█████╔╝██║░╚███║██║░╚██╗███████╗██║░░██║  ░░░██║░░░██║░░██║███████╗██║░╚═╝░██║██║░░██║   ╚█████╔╝██████╔╝██████╔
+╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝  ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚═╝░░╚═╝   ░╚════╝░╚═════╝░╚═════╝░
+*/
+
+
+
+
+/*
+▀█▀ █▀▀ █▄▀ █▀ ▀█▀ █▀▀ █▄░█
+░█░ ██▄ █░█ ▄█ ░█░ ██▄ █░▀█
 */
 p {
     font-family: 'Rhodium Libre', serif;
@@ -16,12 +21,19 @@ p {
     font-size: 1vw;
 }
 
-h1{
+h1 {
     font-size: 2.5vw;
+    color: #bf9801;
+}
+
+h2 {
+    font-size: 1.5vw;
+    color: #bf9801;
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1vw;
+    color: #bf9801;
 }
 
 .errortext {
@@ -32,28 +44,14 @@ h3 {
     text-align: left;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.header {
-    justify-content: space-between;
-    height: 280px;
-    background-color: darkred;
-    background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
-    /*background-image: url("Theater-De-Rinkelaar/wwwroot/img/theater-header.jpg");*/
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
-.flexboxplswerk {
-    display: flex;
-    justify-content: space-between;
-}
 
+/*
+▀█▀ █▀█ █▀█   █▀▀ █▄░█   █▄▄ █▀█ ▀█▀   █░░ █▀█ █▀▀ █▀█ ▀ █▀
+░█░ █▄█ █▀▀   ██▄ █░▀█   █▄█ █▄█ ░█░   █▄▄ █▄█ █▄█ █▄█ ░ ▄█
+*/
 .toplogo {
     border-radius: 30px;
     align-self: center;
@@ -72,7 +70,7 @@ h3 {
     /*border: 4px solid #7B0D1E;*/
     margin-top: 15px;
     margin-left: 15px;
-} 
+}
 
 .botlogo {
     border-radius: 30px;
@@ -83,6 +81,45 @@ h3 {
     margin-top: 15px;
     margin-left: 15px;
 }
+
+
+
+
+/*
+█░█ █▀▀ ▄▀█ █▀▄ █▀▀ █▀█
+█▀█ ██▄ █▀█ █▄▀ ██▄ █▀▄
+*/
+
+/*fancy code die header fixed maakt*/
+/*.article {
+    overflow-y: scroll;
+    height: calc(100vh - 300px);
+    display: block;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+*/
+
+
+.header {
+    justify-content: space-between;
+    height: 280px;
+    background-color: darkred;
+    background-image: url("https://www.theatreinparis.com/uploads/images/article/la-nouvelle-seine-petits-theatres-paris-header.jpg");
+    /*background-image: url("Theater-De-Rinkelaar/wwwroot/img/theater-header.jpg");*/
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
 
 /*css voor zoekbalk*/
 
@@ -169,9 +206,22 @@ h3 {
     }
 }
 
+
+
+
+
+/*
+█▄▄ █▀█ █▀▄ █▄█
+█▄█ █▄█ █▄▀ ░█░
+*/
+
 body {
     background-color: #332828;
     margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .dark-mode {
@@ -179,6 +229,15 @@ body {
     color: white;
 }
 
+
+
+
+
+/*
+
+█▄░█ ▄▀█ █░█ █▄▄ ▄▀█ █▀█
+█░▀█ █▀█ ▀▄▀ █▄█ █▀█ █▀▄
+*/
 /* Achtergrondkleur van navigatiebalk */
 #mynavbar {
     height: 120px;
@@ -225,22 +284,15 @@ body {
 
 
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 
-/* Page content */
-.content {
-    padding: 16px;
-}
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-    padding-top: 60px;
-}
+
+
+
+/*   
+█▀▀ █▀█ █░░ █░█ █▀▄▀█ █▄░█ █▀
+█▄▄ █▄█ █▄▄ █▄█ █░▀░█ █░▀█ ▄█
+*/
 
 /*zorgt ervoor dat elke rij kan worden ingedeeld in flexvakjes*/
 .row {
@@ -253,7 +305,7 @@ body {
     flex-grow: 1;
     width: 30%;
     background-color: #310a14;
-    padding: 40px 10px;
+    padding: 4vw 1vw 1vw 1vw;
     margin: 2vw;
     text-align: center;
     border-radius: 27px;
@@ -267,7 +319,7 @@ body {
     flex-grow: 2;
     width: 30%;
     background-color: #310a14;
-    padding: 40px 10px;
+    padding: 4vw 1vw 1vw 1vw;
     margin: 20px;
     text-align: center;
     border-radius: 27px;
@@ -281,7 +333,7 @@ body {
     flex-grow: 3;
     width: 30%;
     background-color: #310a14;
-    padding: 40px 10px;
+    padding: 4vw 1vw 1vw 1vw;
     margin: 20px;
     text-align: center;
     border-radius: 27px;
@@ -291,7 +343,42 @@ body {
     line-break: normal;
 }
 
+.voorstellingcolumn {
+    flex-grow: 1;
+    width: 30%;
+    background-color: #310a14;
+    padding: 4vw 1vw 1vw 1vw;
+    margin: 1vw 0 1vw 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    line-break: normal;
+}
 
+.voorstellingcolumn3 {
+    flex-grow: 3;
+    width: 30%;
+    background-color: #310a14;
+    padding: 4vw 1vw 1vw 1vw;
+    margin: 1vw 0 1vw 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #bf9801;
+    line-break: normal;
+    border-right: 6px dashed #000000;
+}
+
+
+
+
+
+
+/*
+█▄▀ █▄░█ █▀█ █▀█ █▀█ █▀▀ █▄░█
+█░█ █░▀█ █▄█ █▀▀ █▀▀ ██▄ █░▀█
+*/
 
 /*css voor knoppen in flexvakjes*/
 .knop {
@@ -408,174 +495,15 @@ body {
     color: #F8E5EE;
 }
 
-.agendaplaatje {
-    border-radius: 30px;
-    float: right;
-    height: 300px;
-    width: 300px;
-    border: 4px solid #7B0D1E;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
-/*fotovakje op home-pagina*/
-.fotos1 {
-    flex-grow: 1;
-    height: 500px;
-    width: 40%;
-    background-color: #9F2042;
-    padding: 40px 10px;
-    margin: 20px;
-    text-align: center;
-    font-size: 20px;
-    color: #F8E5EE;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/IvanVazov_National_Theatre_7.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 5px solid #000000;
-    border-radius: 21px;
-}
-
-.prijzentabel td {
-    border-bottom: 2px solid #ddd;
-    border-collapse: collapse;
-    padding: 0 1vw 0 1vw;
-}
-
-.prijzentabel {
-    border-collapse: collapse;
-}
-
-/*tijdstabel op home-pagina*/
-.tijdencolumn {
-    flex-grow: 1;
-    align-content: center;
-    width: 40%;
-    background-color: #310a14;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin: 0.75vh 70vh 0.5vh 70vh;
-    border-radius: 27px;
-    text-align: center;
-    font-size: 20px;
-    color: #f6f6f6b9;
-    font-family: 'Rhodium Libre', serif;
-}
-
-/*tijdentabel css*/
-caption {
-    font-size: 1.5vw;
-    margin-bottom: 5px;
-}
-
-.tijden {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline;
-}
-
-table {
-    display: flex;
-    justify-content: center;
-}
-
-th {
-    font-weight: 900;
-    font-size: 1.1vw;
-}
-
-td {
-    font-weight: 200;
-    font-size: 1vw;
-    color: #f6f6f6b9;
-}
-
-/*contactpagina*/
-.columncp {
-    flex-grow: 1;
-    width: 30%;
-    background-color: #310a14;
-    padding: 40px 10px;
-    margin: 20px;
-    border-radius: 27px;
-    font-size: 20px;
-    font-family: 'Rhodium Libre', serif;
-    color: #f6f6f6b9;
-}
-
-.contactform label {
-    width: 200px;
-    display: inline-block;
-}
-
-/*Errorbericht van contactpagina*/
-.contactform .field-validation-error {
-    color: white;
-    margin-left: 10px;
-}
-
-/*tweede fotovakje op home-pagina*/
-.fotos2 {
-    flex-grow: 1;
-    height: 500px;
-    width: 40%;
-    background-color: #9F2042;
-    padding: 40px 10px;
-    margin: 20px;
-    text-align: center;
-    font-size: 20px;
-    color: #F8E5EE;
-    background-image: url(https://www.rondvaarteuropoort.nl/wp-content/uploads/2020/03/rederij_ameland_rondvaart_europoort_de_ameland_voorkant.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 5px solid #000000;
-    border-radius: 21px;
-}
 
 
-.columncp input[type=text] {
-    border-radius: 10px;
-    background-color: #7c243a;
-    height: 40px;
-    width: 300px;
-    margin: 5px;
-    font-size: 20px;
-    color: white;
-}
-
-.fotos3 {
-    flex-grow: 1;
-    height: 500px;
-    width: 40%;
-    background-color: #9F2042;
-    padding: 40px 10px;
-    margin: 20px;
-    text-align: center;
-    font-size: 20px;
-    color: #F8E5EE;
-    background-image: url(https://www.deameland.nl/wp-content/uploads/2020/08/rondvaart_europoort_de_ameland.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 65% 50%;
-    border: 5px solid #000000;
-    border-radius: 21px;
-}
 
 
-.form-group2 input[type=text] {
-    border-radius: 10px;
-    background-color: #5c2533;
-    height: 150px;
-    width: 300px;
-    margin: 5px;
-    font-size: 15px;
-    padding-bottom: 80px;
-    padding-right: 5px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    color: #450913;
-}
+
+/*
+█▀ █▀▀ █▀█ █▀█ █░░ █░░ █▄▄ ▄▀█ █▀█
+▄█ █▄▄ █▀▄ █▄█ █▄▄ █▄▄ █▄█ █▀█ █▀▄
+*/
 
 /* width */
 ::-webkit-scrollbar {
@@ -601,6 +529,65 @@ td {
     background: red;
 }*/
 
+
+
+
+
+/*   
+█▀▀ █▀█ █▄░█ ▀█▀ ▄▀█ █▀▀ ▀█▀ █▀█ ▄▀█ █▀▀ █ █▄░█ ▄▀█
+█▄▄ █▄█ █░▀█ ░█░ █▀█ █▄▄ ░█░ █▀▀ █▀█ █▄█ █ █░▀█ █▀█
+*/
+
+
+/*contactpagina*/
+.columncp {
+    flex-grow: 1;
+    width: 30%;
+    background-color: #310a14;
+    padding: 40px 10px;
+    margin: 20px;
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Rhodium Libre', serif;
+    color: #f6f6f6b9;
+}
+
+.contactform label {
+    width: 200px;
+    display: inline-block;
+}
+
+/*Errorbericht van contactpagina*/
+.contactform .field-validation-error {
+    color: white;
+    margin-left: 10px;
+}
+
+.columncp input[type=text] {
+    border-radius: 10px;
+    background-color: #7c243a;
+    height: 40px;
+    width: 300px;
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.form-group2 input[type=text] {
+    border-radius: 10px;
+    background-color: #5c2533;
+    height: 150px;
+    width: 300px;
+    margin: 5px;
+    font-size: 15px;
+    padding-bottom: 80px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #450913;
+}
+
 .columncp input[type=submit] {
     padding: 6px;
     margin-top: 8px;
@@ -619,6 +606,13 @@ td {
     border: 2px solid #000000;
 }
 
+
+
+
+/*
+█▀▀ █▀█ █▀█ ▀█▀ █▀▀ █▀█
+█▀░ █▄█ █▄█ ░█░ ██▄ █▀▄
+*/
 
 /*footer css*/
 .footer {
@@ -653,6 +647,15 @@ td {
     margin: 0;
     padding: 0;
 }
+
+
+
+
+
+/*
+█▀ █▀▀ ▄▀█ ▀█▀ █▀ █▀▀ █░░ █▀▀ █▀▀ ▀█▀ █▀█ █▀█
+▄█ ██▄ █▀█ ░█░ ▄█ ██▄ █▄▄ ██▄ █▄▄ ░█░ █▄█ █▀▄
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -761,3 +764,130 @@ p.text {
     p.text span {
         color: #6feaf6;
     }
+
+/*  
+█▀█ █░█ █▀▀ █▀█ █ █▀▀
+█▄█ ▀▄▀ ██▄ █▀▄ █ █▄█
+*/
+.flexboxplswerk {
+    display: flex;
+    justify-content: space-between;
+}
+
+.agendaplaatje {
+    border-radius: 30px;
+    float: right;
+    height: 300px;
+    width: 300px;
+    border: 4px solid #7B0D1E;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/*fotovakje op home-pagina*/
+.fotos1 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/IvanVazov_National_Theatre_7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+/*tweede fotovakje op home-pagina*/
+.fotos2 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://www.rondvaarteuropoort.nl/wp-content/uploads/2020/03/rederij_ameland_rondvaart_europoort_de_ameland_voorkant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+.fotos3 {
+    flex-grow: 1;
+    height: 500px;
+    width: 40%;
+    background-color: #9F2042;
+    padding: 40px 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #F8E5EE;
+    background-image: url(https://www.deameland.nl/wp-content/uploads/2020/08/rondvaart_europoort_de_ameland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65% 50%;
+    border: 5px solid #000000;
+    border-radius: 21px;
+}
+
+.underscoretable td {
+    border-bottom: 2px solid #ddd;
+    border-collapse: collapse;
+    padding: 0 1vw 0 1vw;
+}
+
+.underscoretable {
+    border-collapse: collapse;
+}
+
+/*tijdstabel op home-pagina*/
+.tijdencolumn {
+    flex-grow: 1;
+    align-content: center;
+    width: 40%;
+    background-color: #310a14;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 0.75vh 70vh 0.5vh 70vh;
+    border-radius: 27px;
+    text-align: center;
+    font-size: 20px;
+    color: #f6f6f6b9;
+    font-family: 'Rhodium Libre', serif;
+}
+
+/*tijdentabel css*/
+caption {
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+}
+
+.tijden {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    font-weight: 900;
+    font-size: 1.1vw;
+}
+
+td {
+    font-weight: 200;
+    font-size: 1vw;
+    color: #f6f6f6b9;
+}

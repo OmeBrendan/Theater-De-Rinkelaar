@@ -3,11 +3,11 @@
     ViewData["activeTab"] = "Voorstellingen";
 }
 
-
+@*prijzentabel*@
 <div class="row">
         <div class="column">
             <h3>Wij hanteren bij al onze voorstellingen de volgende prijzen:</h3>
-            <table class="prijzentabel">
+            <table class="underscoretable">
                 <tr >
                     <td class="patatje">
                         <p>kinderen tot 5 jaar</p>
@@ -59,9 +59,31 @@
 @foreach (var product in Model)
 {
     <div class="row">
-        <div class="column">
-        <h1> @product.Naam </h1> <h3 class="voorstellingtekst">Duur: @product.Duur</h3> <p class="voorstellingtekst"> Beschrijving: <br> @product.Beschrijvinglang </p>
+        <div class="voorstellingcolumn3">          
+            <table class="underscoretable">
+                <tr>
+                    <td>
+                        <h1> @product.Naam </h1>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="voorstellingtekst">Duur: @product.Duur</h3>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p class="voorstellingtekst">De eerstvolgende opvoering van deze voorstelling is op: @product.Datum</p>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="voorstellingcolumn">
+          <h2 class="voorstellingtekst">Beschrijving:</h2><p class="voorstellingtekst">@product.Beschrijvinglang</p>
         </div>
     </div>
 }
-</ul>
+
