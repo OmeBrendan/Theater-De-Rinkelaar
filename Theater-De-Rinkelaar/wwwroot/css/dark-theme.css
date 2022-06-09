@@ -718,6 +718,7 @@ body {
     margin: 1vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transition: all .2s ease-in-out;
 }
 
     .seat.selected {
