@@ -158,25 +158,27 @@ namespace Theater_De_Rinkelaar.Controllers
 
         private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
         {
-            Voorstelling p = new Voorstelling();
-            p.Naam = row["naam"].ToString();
-            p.Beschrijvingkort = row["beschrijvingkort"].ToString();
-            p.Beschrijvinglang = row["beschrijvinglang"].ToString();
-            p.Datum = row["datum"].ToString();
-            p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-            p.Begintijd = row["begintijd"].ToString();
-            p.Eindtijd = row["eindtijd"].ToString();
-            p.Duur = row["duur"].ToString();
-            p.Id = Convert.ToInt32(row["id"]);
-            p.Plaatje = row["plaatje"].ToString();
-            p.VoorstellingId = Convert.ToInt32(row["voorstelling_id"]);
+            Voorstelling v = new Voorstelling();
+            v.Naam = row["naam"].ToString();
+            v.Beschrijvingkort = row["beschrijvingkort"].ToString();
+            v.Beschrijvinglang = row["beschrijvinglang"].ToString();
+            v.Datum = row["datum"].ToString();
+            v.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+            v.Begintijd = row["begintijd"].ToString();
+            v.Eindtijd = row["eindtijd"].ToString();
+            v.Duur = row["duur"].ToString();
+            v.Id = Convert.ToInt32(row["id"]);
+            v.Plaatje = row["plaatje"].ToString();
+            v.VoorstellingId = Convert.ToInt32(row["voorstelling_id"]);
 
-            return p;
+            return v;
         }
         public List<string> GetNames()
         {
             // stel in waar de database gevonden kan worden
-            string connectionString = "Server=172.16.160.21;Port=3306;Database=110664;Uid=110664;Pwd=inf2122sql;";
+            //string connectionString = "Server=172.16.160.21;Port=3306;Database=110664;Uid=110664;Pwd=inf2122sql;";
+            string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110698;Uid=110698;Pwd=inf2122sql;";
+
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<string> names = new List<string>();

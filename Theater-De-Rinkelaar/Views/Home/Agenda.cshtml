@@ -6,14 +6,14 @@
 @model List<Voorstelling>
 
 
-@foreach (var product in Model)
+@foreach (var voorstelling in Model)
 {
     <div class="row">
         <div class="column">
-            <h1>@product.Datum van @product.Begintijd tot @product.Eindtijd :</h1>
-            <h2>@product.Naam</h2>
-            <br> @product.Beschrijvingkort <br> er zijn nog @product.Beschikbaarheid kaartjes
-            <a class=agendaknop href="/voorstelling/@product.Id">Koop snel kaartjes!</a>
+            <h1>@voorstelling.Datum van @voorstelling.Begintijd tot @voorstelling.Eindtijd :</h1>
+            <h2>@voorstelling.Naam</h2>
+            <br> @voorstelling.Beschrijvingkort <br> er zijn nog @voorstelling.Beschikbaarheid kaartjes
+            <a class=agendaknop href="/voorstelling/@voorstelling.Id">Koop snel kaartjes!</a>
         </div>
     </div>
 }
