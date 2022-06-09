@@ -299,7 +299,7 @@ body {
     width: 17vw;
     object-position: center;
     flex-grow: 1;
-    background: #7B0D1E;
+    background: #3b070f;
     color: #F8E5EE;
     text-align: center;
     padding: 10px 15px;
@@ -311,7 +311,7 @@ body {
 }
 
     .knop:hover {
-        background-color: #ddd;
+        background-color: #717171;
         color: black;
     }
 
@@ -319,7 +319,7 @@ body {
     width: 17vw;
     object-position: left;
     flex-grow: 1;
-    background: #7B0D1E;
+    background: #3b070f;
     color: #F8E5EE;
     text-align: center;
     padding: 10px 15px;
@@ -331,37 +331,38 @@ body {
 }
 
     .terugknop:hover {
-        background-color: #ddd;
+        background-color: #717171;
         color: black;
     }
 
 .btn-toggle {
-    display: flex;
-    width: 17vw;
+    position: fixed;
     object-position: center;
     flex-grow: 1;
-    background: #313131;
-    color: #747474;
-    text-align: center;
+    background: #3b070f;
     padding: 10px 15px;
-    margin-left: 1vw;
-    text-decoration: none;
-    font-size: 1.5vw;
     border: 6px solid #000000;
     border-radius: 14px;
 }
 
     .btn-toggle:hover {
-        background-color: #525252;
-        color: gold;
+        background-color: #414141;
+        cursor: pointer;
     }
+
+.highcontrast {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    width: 3vw;
+    height: 3vw;
+}
 
 .agendaknop {
     display: flex;
     width: 20vw;
     object-position: center;
     flex-grow: 1;
-    background: #7B0D1E;
+    background: #3b070f;
     color: #F8E5EE;
     text-align: center;
     padding: 10px 15px;
@@ -373,7 +374,7 @@ body {
 }
 
     .agendaknop:hover {
-        background-color: #ddd;
+        background-color: #717171;
         color: black;
     }
 
@@ -387,7 +388,7 @@ body {
     width: 30%;
     object-position: left;
     flex-grow: 1;
-    background: #7B0D1E;
+    background: #3b070f;
     color: #F8E5EE;
     text-align: center;
     padding: 5px 7px;
@@ -399,7 +400,7 @@ body {
 }
 
     .miniknop:hover {
-        background-color: #ddd;
+        background-color: #717171;
         color: black;
     }
 
@@ -433,6 +434,16 @@ body {
     background-size: cover;
     border: 5px solid #000000;
     border-radius: 21px;
+}
+
+.prijzentabel td {
+    border-bottom: 2px solid #ddd;
+    border-collapse: collapse;
+    padding: 0 1vw 0 1vw;
+}
+
+.prijzentabel {
+    border-collapse: collapse;
 }
 
 /*tijdstabel op home-pagina*/

@@ -248,7 +248,7 @@ body {
 /*zorgt ervoor dat elke rij kan worden ingedeeld in flexvakjes*/
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /*css voor 1 flexvakje*/
@@ -342,23 +342,26 @@ body {
 
 .btn-toggle {
     display: flex;
-    width: 17vw;
+    position: fixed;
     object-position: center;
     flex-grow: 1;
-    background: #9c9c9c;
-    color: #404040;
-    text-align: center;
+    background: #7B0D1E;
     padding: 10px 15px;
-    margin-left: 1vw;
-    text-decoration: none;
-    font-size: 1.5vw;
     border: 6px solid #000000;
     border-radius: 14px;
+
 }
 
     .btn-toggle:hover {
-    background-color: #333333;
-    color: gold;
+        background-color: #414141;
+        cursor: pointer;
+    }
+
+    .highcontrast {
+        -webkit-filter: grayscale(1) invert(1);
+        filter: grayscale(1) invert(1);
+        width: 3vw;
+        height: 3vw;
     }
 
 .agendaknop {
@@ -440,11 +443,12 @@ body {
     border-radius: 21px;
 }
 
-td {
+.prijzentabel td {
     border-bottom: 2px solid #ddd;
     border-collapse: collapse;
     padding: 0 1vw 0 1vw;
 }
+
 
 .prijzentabel {
     border-collapse: collapse;
