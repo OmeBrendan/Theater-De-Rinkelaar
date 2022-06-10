@@ -802,6 +802,8 @@ p.text {
     border: 4px solid #7B0D1E;
     margin-top: 15px;
     margin-left: 15px;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
 }
 
 /*fotovakje op home-pagina*/
