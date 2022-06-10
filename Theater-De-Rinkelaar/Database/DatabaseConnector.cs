@@ -60,7 +60,7 @@ namespace Theater_De_Rinkelaar.Database
             {
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klanten(voornaam, achternaam, email, adres, telefoonnummer, bericht) VALUES(?voornaam, ?achternaam, ?email, ?adres, ?telefoonnummer ?bericht)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klanten(voornaam, achternaam, email, adres, telefoonnummer, bericht) VALUES(?voornaam, ?achternaam, ?email, ?adres, ?telefoonnummer, ?bericht)", conn);
 
                 // Elke parameter moet je handmatig toevoegen aan de query
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.FirstName;
