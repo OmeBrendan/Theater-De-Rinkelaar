@@ -458,15 +458,14 @@ body {
 .secretknop {
     display: flex;
     justify-content: center;
-    width: 17vw;
+    width: 14vw;
     flex-grow: 1;
-    background-color: #332828;
-    color: #332828;
+    background-color: #4d4141;
+    color: black;
     padding: 10px 15px;
     margin: 0.5vw;
     text-decoration: none;
     font-size: 2vw;
-    border: 6px solid #000000;
     border-radius: 14px;
     transition: all .2s ease-in-out;
 }
