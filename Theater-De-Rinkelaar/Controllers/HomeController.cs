@@ -106,6 +106,12 @@ namespace Theater_De_Rinkelaar.Controllers
             return View();
         }
 
+        [Route("secret")]
+        public IActionResult Secret()
+        {
+            return View();
+        }
+
         [Route("voorstelling/{id}")]
         public IActionResult VoorstellingDetails(int id)
         {

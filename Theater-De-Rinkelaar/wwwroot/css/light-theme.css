@@ -409,6 +409,43 @@ body {
         color: black;
         margin: 0vw;
     }
+.terugknop2 {
+    display: flex;
+    justify-content: center;
+    width: 17vw;
+    flex-grow: 1;
+    background: #7B0D1E;
+    color: #F8E5EE;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0.5vw;
+    text-decoration: none;
+    font-size: 2vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+    transition: all .2s ease-in-out;
+}
+
+    .terugknop2:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.secretknop {
+    display: flex;
+    justify-content: center;
+    width: 17vw;
+    flex-grow: 1;
+    background-color: #F8E5EE;
+    color: #F8E5EE;
+    padding: 10px 15px;
+    margin: 0.5vw;
+    text-decoration: none;
+    font-size: 2vw;
+    border: 6px solid #000000;
+    border-radius: 14px;
+    transition: all .2s ease-in-out;
+}
 
 .btn-toggle {
     display: flex;
