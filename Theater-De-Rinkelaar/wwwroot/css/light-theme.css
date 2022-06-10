@@ -22,6 +22,7 @@ p {
     font-family: 'Rhodium Libre', serif;
     color: #ffffff;
     font-size: 1vw;
+    
 }
 
 h1{
@@ -933,3 +934,9 @@ td {
     border-radius: 21px;
 }
 
+.flexy {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    flex-direction: column;
+}
