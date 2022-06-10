@@ -443,6 +443,7 @@ body {
     border: 6px solid #000000;
     border-radius: 14px;
     transition: all .2s ease-in-out;
+    z-index: 10;
 }
 
     .btn-toggle:hover {
@@ -770,6 +771,16 @@ body {
         .showcase li small {
             margin-left: 2px;
         }
+
+.podium {
+    background-color: #1e0904;
+    height: 7vw;
+    width: 100%;
+    margin: 15px 0;
+    padding: 2vw;
+    transform: rotateX(-10deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
 
 .rij {
     display: flex;
