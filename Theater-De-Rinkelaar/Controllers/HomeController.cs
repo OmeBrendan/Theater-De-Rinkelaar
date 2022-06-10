@@ -34,7 +34,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, leeftijd, voorstelling_id FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, leeftijd, voorstelling_id FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -153,17 +153,11 @@ namespace Theater_De_Rinkelaar.Controllers
         public Voorstelling GetVoorstelling(int id)
         {
             // product ophalen uit de database op basis van het idee
-            var rows = DatabaseConnector.GetRows($"select * from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid where agenda.id = {id}");
+            var rows = DatabaseConnector.GetRows($"select agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, leeftijd, voorstelling_id from agenda INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingen.id where agenda.id = {id}");
+
+            var row = rows[0];
 
             // lijst maken om alle producten in te stoppen
-            Voorstelling voorstelling = GetVoorstellingFromRow(rows[0]);
-
-            return voorstelling;
-        }
-
-
-        private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
-        {
             Voorstelling v = new Voorstelling();
             v.Naam = row["naam"].ToString();
             v.Beschrijvingkort = row["beschrijvingkort"].ToString();
@@ -176,7 +170,21 @@ namespace Theater_De_Rinkelaar.Controllers
             v.Leeftijd = row["leeftijd"].ToString();
             v.Id = Convert.ToInt32(row["id"]);
             v.Plaatje = row["plaatje"].ToString();
-            v.VoorstellingId = Convert.ToInt32(row["voorstelling_id"]);
+
+            return v;
+        }
+
+
+        private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
+        {
+            Voorstelling v = new Voorstelling();
+            v.Naam = row["naam"].ToString();
+            v.Beschrijvingkort = row["beschrijvingkort"].ToString();
+            v.Beschrijvinglang = row["beschrijvinglang"].ToString();
+            v.Duur = row["duur"].ToString();
+            v.Leeftijd = row["leeftijd"].ToString();
+            v.Id = Convert.ToInt32(row["id"]);
+            v.Plaatje = row["plaatje"].ToString();
 
             return v;
         }
