@@ -411,14 +411,15 @@ body {
     }
 
 .terugknop {
+    display: flex;
+    justify-content: center;
     width: 17vw;
-    object-position: left;
     flex-grow: 1;
     background: #3b070f;
     color: #F8E5EE;
     text-align: center;
     padding: 10px 15px;
-    margin: 0 150vh 0 0;
+    margin: 0.5vw;
     text-decoration: none;
     font-size: 2vw;
     border: 6px solid #000000;
@@ -429,7 +430,7 @@ body {
     .terugknop:hover {
         background-color: #717171;
         color: black;
-        transform: scale(1.2);
+        margin: 0vw;
     }
 
 .btn-toggle {
@@ -438,6 +439,7 @@ body {
     flex-grow: 1;
     background: #3b070f;
     padding: 10px 15px;
+    margin: 0 0 0 -1vw;
     border: 6px solid #000000;
     border-radius: 14px;
     transition: all .2s ease-in-out;
@@ -447,6 +449,7 @@ body {
         background-color: #414141;
         cursor: pointer;
         transform: scale(1.2);
+        margin: 0 0 0 0.5vw;
     }
 
 .highcontrast {

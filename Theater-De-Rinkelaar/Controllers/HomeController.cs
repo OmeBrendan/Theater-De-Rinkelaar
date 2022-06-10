@@ -34,7 +34,7 @@ namespace Theater_De_Rinkelaar.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, voorstelling_id FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid");
+            var rows = DatabaseConnector.GetRows("SELECT agenda.id, beschikbaarheid, naam, datum, beschrijvingkort, beschrijvinglang, begintijd, eindtijd, duur, plaatje, leeftijd, voorstelling_id FROM `agenda` INNER JOIN voorstellingen ON agenda.voorstelling_id = voorstellingid");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -167,6 +167,7 @@ namespace Theater_De_Rinkelaar.Controllers
             v.Begintijd = row["begintijd"].ToString();
             v.Eindtijd = row["eindtijd"].ToString();
             v.Duur = row["duur"].ToString();
+            v.Leeftijd = row["leeftijd"].ToString();
             v.Id = Convert.ToInt32(row["id"]);
             v.Plaatje = row["plaatje"].ToString();
             v.VoorstellingId = Convert.ToInt32(row["voorstelling_id"]);

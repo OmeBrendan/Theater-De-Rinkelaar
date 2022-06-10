@@ -407,7 +407,7 @@ body {
     .terugknop:hover {
         background-color: #ddd;
         color: black;
-        transform: scale(1.2);
+        margin: 0vw;
     }
 
 .btn-toggle {
@@ -417,6 +417,7 @@ body {
     flex-grow: 1;
     background: #7B0D1E;
     padding: 10px 15px;
+    margin: 0 0 0 -1vw;
     border: 6px solid #000000;
     border-radius: 14px;
     transition: all .2s ease-in-out;
@@ -426,6 +427,7 @@ body {
         background-color: #414141;
         cursor: pointer;
         transform: scale(1.2);
+        margin: 0 0 0 0.5vw;
     }
 
     .highcontrast {
