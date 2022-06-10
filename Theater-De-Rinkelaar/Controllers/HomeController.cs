@@ -178,6 +178,9 @@ namespace Theater_De_Rinkelaar.Controllers
         private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
         {
             Voorstelling v = new Voorstelling();
+            v.Datum = row["datum"].ToString();
+            v.Begintijd = row["begintijd"].ToString();
+            v.Eindtijd = row["eindtijd"].ToString();
             v.Naam = row["naam"].ToString();
             v.Beschrijvingkort = row["beschrijvingkort"].ToString();
             v.Beschrijvinglang = row["beschrijvinglang"].ToString();
