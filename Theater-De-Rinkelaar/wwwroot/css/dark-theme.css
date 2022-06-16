@@ -48,6 +48,9 @@ small {
     color: gold;
 }
 
+a {
+    color: deepskyblue;
+}
 
 
 
@@ -76,11 +79,18 @@ small {
 }
 
 .botlogo {
-    border-radius: 30px;
+    border-radius: 1.5vw;
     float: right;
-    height: 140px;
-    width: 140px;
-    border: 4px solid #7B0D1E;
+    height: 7vw;
+    width: 7vw;
+    border: 0.2vw solid #7B0D1E;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.socialmedia {
+    height: 5vw;
+    width: 5vw;
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -259,7 +269,7 @@ body {
         display: block;
         background: #3b070f;
         width: 21%;
-        color: #F8E5EE;
+        color: gold;
         text-align: center;
         padding: 25px 15px;
         margin: 0.5% 1%;
@@ -279,7 +289,7 @@ body {
 /* Add a color to the active/current link */
         #mynavbar a.active {
             background-color: #62162a;
-            color: white;
+            color: gold;
             border-radius: 14px 14px 0px 0px;
             margin: 0.5% 1% 0% 1%;
         }
@@ -534,9 +544,9 @@ body {
     color: #F8E5EE;
     text-align: center;
     padding: 5px 7px;
-    margin: auto;
+    margin-top: 2vw;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.9vw;
     border: 3px solid #000000;
     border-radius: 10px;
     transition: all .2s ease-in-out;
@@ -569,33 +579,25 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
     background: #310a14;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 5px grey;
     background: #7B0D1E;
     border-radius: 10px;
 }
 
-/*::-webkit-scrollbar-button {
-    width: 20px;
-    height: 150px;
-    background: red;
-}*/
-
-
-
-
+::-webkit-scrollbar-corner {
+    background: #332828;
+}
 
 /*   
 █▀▀ █▀█ █▄░█ ▀█▀ ▄▀█ █▀▀ ▀█▀ █▀█ ▄▀█ █▀▀ █ █▄░█ ▄▀█
 █▄▄ █▄█ █░▀█ ░█░ █▀█ █▄▄ ░█░ █▀▀ █▀█ █▄█ █ █░▀█ █▀█
 */
-
-
 /*contactpagina*/
 .columncp {
     flex-grow: 1;
@@ -857,8 +859,7 @@ p.text {
 /*fotovakje op home-pagina*/
 .fotos1 {
     flex-grow: 1;
-    height: 500px;
-    width: 40%;
+    height: 40vw;
     background-color: #9F2042;
     padding: 40px 10px;
     margin: 20px;
@@ -875,8 +876,7 @@ p.text {
 /*tweede fotovakje op home-pagina*/
 .fotos2 {
     flex-grow: 1;
-    height: 500px;
-    width: 40%;
+    height: 40vw;
     background-color: #9F2042;
     padding: 40px 10px;
     margin: 20px;
@@ -892,8 +892,8 @@ p.text {
 
 .fotos3 {
     flex-grow: 1;
-    height: 500px;
-    width: 40%;
+    height: 25vw;
+    width: 40vw;
     background-color: #9F2042;
     padding: 40px 10px;
     margin: 20px;
@@ -918,11 +918,23 @@ p.text {
     border-collapse: collapse;
 }
 
+.underupscoretable td {
+    border-collapse: collapse;
+    background: #332828;
+    padding: 1vw;
+    border-radius: 50vw;
+}
+
+.underupscoretable {
+    margin: 1vw 0 1vw 0;
+}
+
 /*tijdstabel op home-pagina*/
 .tijdencolumn {
     flex-grow: 1;
     align-content: center;
-    width: 40%;
+    width: 30vw;
+    height: 20vw;
     background-color: #310a14;
     padding: 10px;
     padding-bottom: 20px;
@@ -967,4 +979,15 @@ td {
     align-items: center;
     place-content: center;
     flex-direction: column;
+}
+
+.maps {
+    margin-top: 2vw;
+    width: 20vw;
+    height: 16vw;
+}
+
+.spelletjes {
+    width: 60vw;
+    height: 50vw;
 }

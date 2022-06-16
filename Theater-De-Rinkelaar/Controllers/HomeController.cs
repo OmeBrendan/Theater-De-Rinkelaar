@@ -179,6 +179,7 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             Voorstelling v = new Voorstelling();
             v.Datum = row["datum"].ToString();
+            v.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
             v.Begintijd = row["begintijd"].ToString();
             v.Eindtijd = row["eindtijd"].ToString();
             v.Naam = row["naam"].ToString();

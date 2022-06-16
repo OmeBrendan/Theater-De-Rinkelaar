@@ -10,9 +10,29 @@
 {
     <div class="row">
         <div class="column">
-            <h1>@voorstelling.Datum van @voorstelling.Begintijd tot @voorstelling.Eindtijd :</h1>
-            <h2>@voorstelling.Naam</h2>
-            <br> @voorstelling.Beschrijvingkort <br> er zijn nog @voorstelling.Beschikbaarheid kaartjes
+            <table class="underscoretable">
+                <tr>
+                    <td>
+                        <h2>@voorstelling.Datum van @voorstelling.Begintijd tot @voorstelling.Eindtijd :</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>@voorstelling.Naam</h1>
+                    </td>
+                </tr>
+            </table>
+
+
+            <br> @voorstelling.Beschrijvingkort 
+            
+            <table class="underupscoretable">
+                <tr>
+                    <td>
+                        <p>Er zijn nog @voorstelling.Beschikbaarheid kaartjes</p>
+                    </td>
+                </tr>
+            </table>            
             <a class=agendaknop href="/voorstelling/@voorstelling.Id">Koop snel kaartjes!</a>
         </div>
     </div>
