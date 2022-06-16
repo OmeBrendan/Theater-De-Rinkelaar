@@ -45,9 +45,10 @@
     </div>
 
 
-
+    @*Dark mode knop*@
     <button class="btn-toggle"><img class="highcontrast" src="/img/highContrast.png" /></button>
-
+    @*Scroll To Top knop*@
+    <button onclick="topFunction()" id="myBtn" class="TopKnop" title="Go to top"><span class="material-symbols-outlined">arrow_upward</span></button>
 
     
     <div class='article'>
@@ -105,23 +106,29 @@
         }
         //localStorage.setItem("theme", theme.href);
       });
+
+
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 
-    @*<script>
-      let x = document.cookie;
-      const btn = document.querySelector(".btn-toggle");
-      const theme = document.querySelector("#theme-link");
-      btn.addEventListener("click", function() {
-        // Swap out the URL for the different stylesheets
-        if (x == "theme=dark") {
-          theme.href = "/css/light-theme.css";
-          document.cookie = "theme=light";
-        } else {
-          theme.href = "/css/dark-theme.css";
-          document.cookie = "theme=dark";
-        }
-      });
-    </script>*@
 
 
 </body>

@@ -15,6 +15,10 @@
 ▀█▀ █▀▀ █▄▀ █▀ ▀█▀ █▀▀ █▄░█
 ░█░ ██▄ █░█ ▄█ ░█░ ██▄ █░▀█
 */
+html {
+    scroll-behavior: smooth;
+}
+
 p {
     font-family: 'Rhodium Libre', serif;
     color: #bf9801;
@@ -562,8 +566,29 @@ body {
     color: #F8E5EE;
 }
 
+.TopKnop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background: #3b070f; /* Set a background color */
+    color: #F8E5EE; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: all .2s ease-in-out; /* Fancy transition animation */
+}
 
-
+    .TopKnop:hover {
+        background-color: #717171;
+        color: black;
+        transform: scale(1.3);
+        margin: 0 0.5vw 0.5vw 0;
+    }
 
 
 
@@ -571,7 +596,6 @@ body {
 █▀ █▀▀ █▀█ █▀█ █░░ █░░ █▄▄ ▄▀█ █▀█
 ▄█ █▄▄ █▀▄ █▄█ █▄▄ █▄▄ █▄█ █▀█ █▀▄
 */
-
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
