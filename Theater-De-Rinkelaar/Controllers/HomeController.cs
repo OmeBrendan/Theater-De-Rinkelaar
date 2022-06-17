@@ -51,6 +51,29 @@ namespace Theater_De_Rinkelaar.Controllers
             return voorstellingen;
         }
 
+        public List<Voorstelling> GetNotAllVoorstellingen()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("SELECT naam, beschrijvinglang, duur, leeftijd FROM `voorstellingen`");
+
+            // lijst maken om alle producten in te stoppen
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
+
+            foreach (var row in rows)
+            {
+                Voorstelling p = new Voorstelling();
+                p.Naam = row["naam"].ToString();
+                p.Beschrijvinglang = row["beschrijvinglang"].ToString();
+                p.Leeftijd = row["leeftijd"].ToString();
+                p.Duur = row["duur"].ToString();
+
+                // en dat product voegen we toe aan de lijst met producten
+                voorstellingen.Add(p);
+            }
+
+            return voorstellingen;
+        }
+
         [Route("Agenda")]
         public IActionResult Agenda()
         {
@@ -74,7 +97,7 @@ namespace Theater_De_Rinkelaar.Controllers
         {
             {
                 // lijst met producten ophalen
-                var products = GetAllVoorstellingen();
+                var products = GetNotAllVoorstellingen();
 
                 // de lijst met producten in de html stoppen
                 return View(products);
@@ -173,6 +196,7 @@ namespace Theater_De_Rinkelaar.Controllers
 
             return v;
         }
+
 
 
         private Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
