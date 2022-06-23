@@ -92,21 +92,26 @@
 
 
     <script>
-      let x = document.cookie;
-      const btn = document.querySelector(".btn-toggle");
+        const btn = document.querySelector(".btn-toggle");
       const theme = document.querySelector("#theme-link");
       btn.addEventListener("click", function() {
         // Swap out the URL for the different stylesheets
-        //localStorage.getItem("theme");
         if (theme.getAttribute("href") == "/css/dark-theme.css") {
           theme.href = "/css/light-theme.css";
-          document.cookie = "theme-light";
+          localStorage.setItem('darkMode', 'disabled');
         } else {
           theme.href = "/css/dark-theme.css";
+          localStorage.setItem('darkMode', 'enabled');
+
         }
-        //localStorage.setItem("theme", theme.href);
       });
 
+      if (localStorage.getItem('darkMode') == 'enabled') {
+        theme.href = "/css/dark-theme.css";
+        }
+      else if (localStorage.getItem('darkMode') == 'disabled') {
+        theme.href = "/css/light-theme.css";
+      }
 
       //Get the button:
       mybutton = document.getElementById("myBtn");
